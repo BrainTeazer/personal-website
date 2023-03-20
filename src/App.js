@@ -5,14 +5,9 @@ import React, { useEffect, useState } from "react";
 
 //import Image from "react-bootstrap/Image";
 import Grid2 from "@mui/material/Unstable_Grid2";
-import { Grid, Paper } from "@mui/material";
+import { Paper } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  solid,
-  regular,
-  brands,
-  icon,
-} from "@fortawesome/fontawesome-svg-core/import.macro";
+import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 //import { AppBar, Toolbar } from "@mui/material";
 import { Button } from "@mui/material";
 import { Image } from "react-bootstrap";
@@ -22,6 +17,7 @@ import animationData from "./lotties/scroll-down-arrow-white.json";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
+  overflow: "auto",
   textAlign: "center",
   color: theme.palette.text.primary,
   borderRadius: "8px",
@@ -113,6 +109,13 @@ const ProfileName = ({ firstName, lastName, file }) => {
     return () => window.removeEventListener("scroll", listenToScroll, true);
   }, []);
 
+  function scrollAbout() {
+    console.log("test");
+    document
+      .getElementById("about")
+      .scrollIntoView({ block: "end", behavior: "smooth" });
+  }
+
   return (
     <>
       <Grid2
@@ -123,11 +126,11 @@ const ProfileName = ({ firstName, lastName, file }) => {
         className="profile"
         spacing={2}
       >
-        <Grid2 id="profile-name">
+        <Grid2 id="profile-name" textAlign={"center"}>
           {firstName} {lastName}
         </Grid2>
         <Grid2>
-          <CVFile file={file} />
+          <CVFile file={file} download />
         </Grid2>
       </Grid2>
       <Grid2
@@ -141,7 +144,14 @@ const ProfileName = ({ firstName, lastName, file }) => {
           visibility: !isVisible ? "hidden" : "visible",
         }}
       >
-        <Lottie height={"4em"} width={"4em"} options={defaultOptions} />
+        <div id="lottie" onClick={() => scrollAbout()}>
+          <Lottie
+            height={"4em"}
+            width={"4em"}
+            options={defaultOptions}
+            isClickToPauseDisabled
+          />
+        </div>
       </Grid2>
     </>
   );
@@ -156,7 +166,7 @@ const GetA = ({ links }) => {
 
   Object.entries(links).forEach(([name, link]) => {
     allLinks.push(
-      <a href={link} target="_blank">
+      <a href={link} target="_blank" rel="noopener noreferrer">
         {" "}
         {name}
       </a>
@@ -183,7 +193,7 @@ const ProjectDescription = ({ img_src, name, description, url, links }) => {
 
           <Grid2 container direction="column" id="project-info">
             <Grid2 item>
-              <a href={url} target="_blank">
+              <a href={url} target="_blank" rel="noopener noreferrer">
                 <h1 id="project-title"> {name} </h1>
               </a>
             </Grid2>
@@ -196,6 +206,22 @@ const ProjectDescription = ({ img_src, name, description, url, links }) => {
         </Grid2>
       </Item>
     </ThemeProvider>
+  );
+};
+
+const ProjectDescriptionGrid = ({ img_src, name, description, url, links }) => {
+  const extra_small_width = 12;
+  const medium_width = 6;
+  return (
+    <Grid2 item xs={extra_small_width} md={medium_width}>
+      <ProjectDescription
+        img_src={img_src}
+        name={name}
+        description={description}
+        url={url}
+        links={links}
+      />
+    </Grid2>
   );
 };
 
@@ -238,47 +264,40 @@ const Projects = () => {
         alignItems="stretch"
         xs={12}
       >
-        <Grid2 item xs={6} md={6}>
-          <ProjectDescription
-            img_src="whiteclaws.png"
-            name="Rippit"
-            description={rippit_desc}
-            url={rippit_url}
-          />
-        </Grid2>
-        <Grid2 item xs={6} md={6}>
-          <ProjectDescription
-            img_src="odin.png"
-            name="The Odin Project"
-            description={odin_desc}
-            url={odin_url}
-            links={odin_links}
-          />
-        </Grid2>
-        <Grid2 item xs={6} md={6}>
-          <ProjectDescription
-            img_src="stochastic-random-walk.png"
-            name="Stochastic Methods Lab"
-            description={sml_desc}
-          />
-        </Grid2>
-        <Grid2 item xs={6} md={6}>
-          <ProjectDescription
-            img_src="uci.png"
-            name="Email Spam Extractor"
-            description={uci_desc}
-            url={uci_url}
-            links={uci_links}
-          />
-        </Grid2>
-        <Grid2 item xs={6} md={6}>
-          <ProjectDescription
-            img_src="code.png"
-            name="Source Code"
-            description={src_desc}
-            url={src_url}
-          />
-        </Grid2>
+        <ProjectDescriptionGrid
+          img_src="whiteclaws.png"
+          name="Rippit"
+          description={rippit_desc}
+          url={rippit_url}
+        />
+        <ProjectDescriptionGrid
+          img_src="odin.png"
+          name="The Odin Project"
+          description={odin_desc}
+          url={odin_url}
+          links={odin_links}
+        />
+
+        <ProjectDescriptionGrid
+          img_src="stochastic-random-walk.png"
+          name="Stochastic Methods Lab"
+          description={sml_desc}
+        />
+
+        <ProjectDescriptionGrid
+          img_src="uci.png"
+          name="Email Spam Extractor"
+          description={uci_desc}
+          url={uci_url}
+          links={uci_links}
+        />
+
+        <ProjectDescriptionGrid
+          img_src="code.png"
+          name="Source Code"
+          description={src_desc}
+          url={src_url}
+        />
       </Grid2>
     </Grid2>
   );
@@ -306,9 +325,26 @@ const Skill = ({ name, img }) => {
   );
 };
 
+const SkillGrid = ({ name, img }) => {
+  const extra_small_width = 12;
+  const small_width = 6;
+  const medium_width = 2;
+  return (
+    <Grid2 md={medium_width} sm={small_width} xs={extra_small_width}>
+      <Skill name={name} img={img} />
+    </Grid2>
+  );
+};
+
 const About = () => {
   return (
-    <Grid2 container className="about" direction="column" spacing={2}>
+    <Grid2
+      container
+      className="about"
+      id="about"
+      direction="column"
+      spacing={2}
+    >
       <Grid2 item>
         <h1 id="about-header"> About </h1>
       </Grid2>
@@ -331,7 +367,7 @@ const About = () => {
           </ul>
         </div>
       </Grid2>
-      <Grid container className="skills" direction="column">
+      <Grid2 container className="skills" direction="column">
         <Grid2 item>
           <h1 id="skills-header"> Skills </h1>
         </Grid2>
@@ -341,44 +377,20 @@ const About = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Grid2 md={2} xs={4}>
-            <Skill name={"C"} img={"c.png"}></Skill>
-          </Grid2>
-          <Grid2 md={2} xs={4}>
-            <Skill name={"C++"} img={"cpp.png"}></Skill>
-          </Grid2>
-          <Grid2 md={2} xs={4}>
-            <Skill name={"JavaScript"} img={"js.png"}></Skill>
-          </Grid2>
-          <Grid2 md={2} xs={4}>
-            <Skill name={"Python"} img={"python.png"}></Skill>
-          </Grid2>
-          <Grid2 md={2} xs={4}>
-            <Skill name={"Rust"} img={"rust.png"}></Skill>
-          </Grid2>
-          <Grid2 md={2} xs={4}>
-            <Skill name={"PHP"} img={"php.png"}></Skill>
-          </Grid2>
-          <Grid2 md={2} xs={4}>
-            <Skill name={"CSS"} img={"css.png"}></Skill>
-          </Grid2>
-          <Grid2 md={2} xs={4}>
-            <Skill name={"HTML"} img={"html.png"}></Skill>
-          </Grid2>
-          <Grid2 md={2} xs={4}>
-            <Skill name={"Java"} img={"java.png"}></Skill>
-          </Grid2>
-          <Grid2 md={2} xs={4}>
-            <Skill name={"Kotlin"} img={"kotlin.png"}></Skill>
-          </Grid2>
-          <Grid2 md={2} xs={4}>
-            <Skill name={"LaTeX"} img={"latex.png"}></Skill>
-          </Grid2>
-          <Grid2 md={2} xs={4}>
-            <Skill name={"Vim"} img={"vim.png"}></Skill>
-          </Grid2>
+          <SkillGrid name={"C"} img={"c.png"} />
+          <SkillGrid name={"C++"} img={"cpp.png"} />
+          <SkillGrid name={"JavaScript"} img={"js.png"} />
+          <SkillGrid name={"Python"} img={"python.png"} />
+          <SkillGrid name={"Rust"} img={"rust.png"} />
+          <SkillGrid name={"PHP"} img={"php.png"} />
+          <SkillGrid name={"CSS"} img={"css.png"} />
+          <SkillGrid name={"HTML"} img={"html.png"} />
+          <SkillGrid name={"Java"} img={"java.png"} />
+          <SkillGrid name={"Kotlin"} img={"kotlin.png"} />
+          <SkillGrid name={"LaTeX"} img={"latex.png"} />
+          <SkillGrid name={"Vim"} img={"vim.png"} />
         </Grid2>
-      </Grid>
+      </Grid2>
     </Grid2>
   );
 };
@@ -392,8 +404,8 @@ const ContactInformation = ({ email, phone, linkedin, github, address }) => {
       alignItems="center"
       className="contact"
     >
-      <Grid2>
-        <div>Get in touch.</div>
+      <Grid2 sx={{ p: "0.3em" }}>
+        <span id="contact-msg">Get in touch.</span>
       </Grid2>
       <Grid2>
         <ContactDetail detail="email" name={email} />
@@ -415,12 +427,13 @@ const ContactDetail = ({ detail, name }) => {
       id="contact-detail"
       style={{ color: info.color }}
     >
-      <FontAwesomeIcon icon={info.icon} pulse />
+      <FontAwesomeIcon icon={info.icon} />
     </a>
   );
 };
 
 const App = () => {
+  const resumeFilePath = String.raw`documents/Ayam_Banjade_Resume_2023_MARCH.pdf`;
   const personalInfo = {
     firstName: "Ayam",
     lastName: "Banjade",
@@ -429,7 +442,7 @@ const App = () => {
     phone: "(+49)15752730515",
     github: "BrainTeazer",
     address: "test",
-    cvFileName: "../public/documents/Ayam_Banjade_Resume_2023_MARCH.pdf",
+    resumeURL: String.raw`https://brainteazer.github.io/${resumeFilePath}`,
   };
 
   return (
@@ -437,7 +450,7 @@ const App = () => {
       <ProfileName
         firstName={personalInfo.firstName}
         lastName={personalInfo.lastName}
-        file={personalInfo.cvFileName}
+        file={personalInfo.resumeURL}
       />
 
       <About />
