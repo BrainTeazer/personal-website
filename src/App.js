@@ -65,7 +65,7 @@ function getURL(website, username) {
 
 const CVFile = ({ file }) => {
   return (
-    <Button href={file} id="download" download>
+    <Button href={file} id="download" target="_blank">
       {" "}
       Resume{" "}
     </Button>
@@ -130,7 +130,7 @@ const ProfileName = ({ firstName, lastName, file }) => {
           {firstName} {lastName}
         </Grid2>
         <Grid2>
-          <CVFile file={file} target="_blank" />
+          <CVFile file={file} />
         </Grid2>
       </Grid2>
       <Grid2
