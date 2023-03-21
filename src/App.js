@@ -130,7 +130,7 @@ const ProfileName = ({ firstName, lastName, file }) => {
           {firstName} {lastName}
         </Grid2>
         <Grid2>
-          <CVFile file={file} download />
+          <CVFile file={file} target="_blank" />
         </Grid2>
       </Grid2>
       <Grid2
