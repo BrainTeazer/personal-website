@@ -35,15 +35,7 @@ a:hover {
   margin: 0;
 }
 
-a#toolbar-item {
-  color: black;
-  text-decoration: solid;
-}
-
-.contact,
-.profile,
-.projects,
-.about {
+.section {
   background-color: black;
   color: white;
   min-width: 100%;
@@ -101,16 +93,17 @@ a#toolbar-item {
 #about-header {
   font-size: 3em;
   font-weight: 1000;
-  text-decoration: underline;
+  text-decoration: none;
+}
+
+#about-header {
+  text-decoration: none;
 }
 
 #skills-header {
-  font-size: 2em;
-  font-weight: 700;
-  text-decoration: underline;
-}
-
-#about-description {
+  font-size: 2.6em;
+  font-weight: 900;
+  text-decoration: none;
 }
 
 #project-info {
@@ -147,11 +140,6 @@ a#toolbar-item {
   background-color: gray;
 }
 
-.item {
-  height: 100%;
-  width: 100%;
-}
-
 #skill {
   margin: 2em;
   margin-bottom: 0em;
@@ -168,4 +156,10 @@ a#toolbar-item {
   height: 4em;
   position: relative;
   bottom: 4em;
+}
+
+.header {
+  background-color: rgba(255, 0, 0, 0.334);
+  border-radius: 4px;
+  padding: 0.2em;
 }
