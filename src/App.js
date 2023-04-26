@@ -231,6 +231,7 @@ const Projects = () => {
   const src_url = String.raw`https://github.com/BrainTeazer/brainteazer.github.io`;
 
   const sml_desc = "Stochastic models related to financial mathematics written in Python.";
+  const sml_url = String.raw`https://github.com/BrainTeazer/stochastic-methods-lab`;
 
   const bug_world_desc = "Simulation game written in Javavscript, HTML, and CSS. Developed assembler, parser, simulator, and GUI. Implemented test cases using ";
   const bug_world_url = String.raw`https://github.com/BrainTeazer/bug-world`;
@@ -251,7 +252,7 @@ const Projects = () => {
         <ProjectDescriptionGrid img_src="whiteclaws.png" name="Rippit" description={rippit_desc} url={rippit_url} />
         <ProjectDescriptionGrid img_src="bug.png" name="Bug World" description={bug_world_desc} url={bug_world_url} links={bug_world_links} />
         <ProjectDescriptionGrid img_src="odin.png" name="The Odin Project" description={odin_desc} url={odin_url} links={odin_links} />
-        <ProjectDescriptionGrid img_src="stochastic-random-walk.png" name="Stochastic Methods Lab" description={sml_desc} />
+        <ProjectDescriptionGrid img_src="stochastic-random-walk.png" name="Stochastic Methods Lab" url={sml_url} description={sml_desc} />
         <ProjectDescriptionGrid img_src="uci.png" name="Email Spam Extractor" description={uci_desc} url={uci_url} links={uci_links} />
         <ProjectDescriptionGrid img_src="code.png" name="Source Code" description={src_desc} url={src_url} />
       </Grid2>
