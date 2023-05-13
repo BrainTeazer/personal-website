@@ -351,6 +351,9 @@ const About = () => {
           <SkillGrid name={"Java"} img={"java.png"} />
           <SkillGrid name={"Kotlin"} img={"kotlin.png"} />
         </Grid2>
+        <Grid2>
+          <Text> iconscout.com </Text>
+        </Grid2>
       </Grid2>
     </Grid2>
   );
