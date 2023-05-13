@@ -271,8 +271,8 @@ const Projects = () => {
         <ProjectDescriptionGrid img_src="stochastic-random-walk.png" name="Stochastic Methods Lab" url={sml_url} description={sml_desc} />
         <ProjectDescriptionGrid img_src="uci.png" name="Email Spam Extractor" description={uci_desc} url={uci_url} links={uci_links} />
         <ProjectDescriptionGrid img_src="code.png" name="Source Code" description={src_desc} url={src_url} />
-        {/* <ProjectDescriptionGrid img_src="todo.png" name="Todo App" description={todo_desc} url={todo_url} links={todo_links} />
-        <ProjectDescriptionGrid img_src="weather.png" name="Weather App" description={weather_desc} url={weather_url} links={weather_links} /> */}
+        <ProjectDescriptionGrid img_src="todo.png" name="Todo App" description={todo_desc} url={todo_url} links={todo_links} />
+        <ProjectDescriptionGrid img_src="weather.png" name="Weather App" description={weather_desc} url={weather_url} links={weather_links} />
       </Grid2>
     </Grid2>
   );
@@ -345,7 +345,7 @@ const About = () => {
           <SkillGrid name={"Rust"} img={"rust.png"} />
           <SkillGrid name={"PHP"} img={"php.png"} />
           <SkillGrid name={"React"} img={"react.png"} />
-          {/* <SkillGrid name={"Flutter"} img={"flutter.png"} /> */}
+          <SkillGrid name={"Flutter"} img={"flutter.png"} />
           <SkillGrid name={"CSS"} img={"css.png"} />
           <SkillGrid name={"HTML"} img={"html.png"} />
           <SkillGrid name={"Java"} img={"java.png"} />
