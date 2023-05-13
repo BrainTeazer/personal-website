@@ -351,8 +351,13 @@ const About = () => {
           <SkillGrid name={"Java"} img={"java.png"} />
           <SkillGrid name={"Kotlin"} img={"kotlin.png"} />
         </Grid2>
-        <Grid2>
-          <Text> iconscout.com </Text>
+        <Grid2 container justifyContent="end" xs={12} sx={{ mr: "4em" }}>
+          <div className="reference">
+            icons from:{" "}
+            <a href="https://iconscout.com" target="_blank" rel="noopener noreferrer">
+              iconscout
+            </a>
+          </div>
         </Grid2>
       </Grid2>
     </Grid2>
