@@ -390,7 +390,11 @@ const ContactDetail = ({ detail, name }) => {
 };
 
 const App = () => {
-  const resumeFilePath = String.raw`documents/Ayam_Banjade_Resume_2023_MAY.pdf`;
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const date = new Date();
+  const month = months[date.getMonth()].toUpperCase();
+  const resumeFilePath = String.raw`documents/Ayam_Banjade_Resume_2023_${month}.pdf`;
+  console.log(resumeFilePath);
   const personalInfo = {
     firstName: "Ayam",
     lastName: "Banjade",
