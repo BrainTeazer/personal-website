@@ -239,21 +239,17 @@ const Projects = () => {
     Jest: String.raw`https://jestjs.io/`,
   };
 
-  const todo_desc = "Minimal multipage ToDo App written in Flutter using MVVM architecture and dependencies: ";
-  const todo_links = {
-    "sqflite, ": String.raw`https://pub.dev/packages/sqflite`,
-    "path, ": String.raw`https://pub.dev/packages/path`,
-    google_fonts: String.raw`https://pub.dev/packages/google_fonts`,
-  };
+  const todo_desc = "Multipage Todo app written in Flutter";
   const todo_url = String.raw`https://github.com/BrainTeazer/todo_app_flutter`;
 
-  const weather_desc = "Minimal multipage Weather App written in Flutter using MVVM architecture and dependencies: ";
+  const weather_desc = "Multipage Weather app written in Flutter";
   const weather_url = String.raw`https://github.com/BrainTeazer/weather_app_flutter`;
-  const weather_links = {
-    "OpenWeather Current Weather Data API, ": String.raw`https://openweathermap.org/current`,
-    "OpenWeather Geocoding API, ": String.raw`https://openweathermap.org/api/geocoding-api`,
-    http: String.raw`https://pub.dev/packages/http`,
-  };
+
+  const room_desc = "Java-based CLI room booking system";
+  const room_url = String.raw`https://github.com/BrainTeazer/java-room-booking-system`;
+
+  const mars_desc = "Kotlin app displaying Mars' surface photos taken by NASA rovers";
+  const mars_url = String.raw`https://github.com/BrainTeazer/marsphotos-demo-kotlin`;
 
   return (
     <Grid2 container className="section" justifyContent="center" mt={"15em"}>
@@ -270,9 +266,11 @@ const Projects = () => {
         <ProjectDescriptionGrid img_src="odin.png" name="The Odin Project" description={odin_desc} url={odin_url} links={odin_links} />
         <ProjectDescriptionGrid img_src="stochastic-random-walk.png" name="Stochastic Methods Lab" url={sml_url} description={sml_desc} />
         <ProjectDescriptionGrid img_src="uci.png" name="Email Spam Extractor" description={uci_desc} url={uci_url} links={uci_links} />
+        <ProjectDescriptionGrid img_src="booking.png" name="Room Booking System" description={room_desc} url={room_url} />
+        <ProjectDescriptionGrid img_src="mars.png" name="Mars Photo App" description={room_desc} url={room_url} />
+        <ProjectDescriptionGrid img_src="todo.png" name="Todo App" description={todo_desc} url={todo_url} />
+        <ProjectDescriptionGrid img_src="weather.png" name="Weather App" description={weather_desc} url={weather_url} />
         <ProjectDescriptionGrid img_src="code.png" name="Source Code" description={src_desc} url={src_url} />
-        <ProjectDescriptionGrid img_src="todo.png" name="Todo App" description={todo_desc} url={todo_url} links={todo_links} />
-        <ProjectDescriptionGrid img_src="weather.png" name="Weather App" description={weather_desc} url={weather_url} links={weather_links} />
       </Grid2>
     </Grid2>
   );
