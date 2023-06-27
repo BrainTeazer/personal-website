@@ -46,9 +46,9 @@
 
 {#if ready}
   <div class="flex flex-col justify-center items-center gap-2 m-4 {themeValue.onBackground}" {id}>
-    <div class="flex items-center gap-4 justify-center">
-      <img src={props.imgSrc} alt="" class="rounded-profile-image gap-4 w-1/5 {themeValue.boxShadow} border-2 {themeValue.border} row-start-1 col-start-1 row-end-5 col-end-2" />
-      <div class="flex flex-col w-2/5">
+    <div class="flex flex-col lg:flex-row items-center gap-4 justify-center items-center">
+      <img src={props.imgSrc} alt="" class="rounded-profile-image gap-4 lg:w-1/5 {themeValue.boxShadow} border-2 {themeValue.border} row-start-1 col-start-1 row-end-5 col-end-2" />
+      <div class="flex flex-col lg:w-2/5 text-center lg:text-left">
         <div class="font-ibm-plex-serif {themeValue.onSecondary}">Hello there :-)</div>
 
         <div class="font-space-grotesk text-4xl mt-2 mb-2" transition:swipeColor={{ delay: 0 }}>I'm {props.name}.</div>
@@ -57,9 +57,9 @@
       </div>
     </div>
     <div class="flex gap-4 mb-4">
-      <a href={props.links.linkedin} target="_blank" rel="noopener noreferrer"><LinkedinIcon /></a>
-      <a href={props.links.github} target="_blank" rel="noopener noreferrer"><GithubIcon /></a>
-      <a href={props.links.mail} target="_blank" rel="noopener noreferrer"><MailIcon /></a>
+      <a href={props.links.linkedin} target="_blank" rel="noopener noreferrer"><LinkedinIcon class="hover:text-blue-500" /></a>
+      <a href={props.links.github} target="_blank" rel="noopener noreferrer"><GithubIcon class="hover:text-slate-500" /></a>
+      <a href={props.links.mail} target="_blank" rel="noopener noreferrer"><MailIcon class="hover:text-green-500" /></a>
     </div>
     <Button text={props.buttonText} href={props.resumeSrc} classProp={"transition-all duration-300"} />
   </div>

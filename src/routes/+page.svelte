@@ -27,8 +27,8 @@
 
 <!-- <Card title={name} date={name} description={name} /> -->
 
-<div class="flex flex-col items-center gap-16 {themeValue.background} {themeValue.onBackground} pb-8">
-  {#if darkMode}
+<div class="flex flex-col items-center gap-16 {themeValue.background} {themeValue.onBackground} pb-8 pt-32">
+  <!-- {#if darkMode}
     <div on:click={darkModeToggle}>
       <SunIcon class="float-right right-0 m-8" />
     </div>
@@ -36,7 +36,7 @@
     <div on:click={darkModeToggle}>
       <MoonIcon class="float-right right-0 m-8" />
     </div>
-  {/if}
+  {/if} -->
 
   <Profile props={profile} id={id.profile} />
   <Skills id={id.skills} imgHeight={100} imgWidth={100} {skills} />
