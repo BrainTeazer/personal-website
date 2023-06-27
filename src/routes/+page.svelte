@@ -1,16 +1,16 @@
 <script lang="ts">
   import Profile from "$lib/components/Profile.svelte";
   import Footer from "$lib/components/Footer.svelte";
-  import profile from "../data/profile";
-  import skills from "../data/skills";
-  import projects from "../data/projects";
-  import id from "../data/id";
+  import profile from "./../data/profile";
+  import skills from "./../data/skills";
+  import projects from "./../data/projects";
+  import id from "./../data/id";
   import Skills from "$lib/components/Skills.svelte";
   import Projects from "$lib/components/Projects.svelte";
   import { MoonIcon, SunIcon } from "svelte-feather-icons";
-  import { darkTheme } from "../theme/darkTheme";
-  import { lightTheme } from "../theme/lightTheme";
-  import { theme } from "../stores";
+  import { darkTheme } from "./../theme/darkTheme";
+  import { lightTheme } from "./../theme/lightTheme";
+  import { theme } from "./../stores";
 
   let themeValue: any;
   theme.subscribe((val) => {
@@ -26,6 +26,7 @@
 </script>
 
 <!-- <Card title={name} date={name} description={name} /> -->
+
 <div class="flex flex-col items-center gap-16 {themeValue.background} {themeValue.onBackground} pb-8">
   {#if darkMode}
     <div on:click={darkModeToggle}>
