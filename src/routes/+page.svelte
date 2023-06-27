@@ -4,6 +4,7 @@
   import profile from "./../data/profile";
   import skills from "./../data/skills";
   import projects from "./../data/projects";
+  import experiences from "./../data/experiences";
   import id from "./../data/id";
   import Skills from "$lib/components/Skills.svelte";
   import Projects from "$lib/components/Projects.svelte";
@@ -11,6 +12,7 @@
   import { darkTheme } from "./../theme/darkTheme";
   import { lightTheme } from "./../theme/lightTheme";
   import { theme } from "./../stores";
+  import Experiences from "$lib/components/Experiences.svelte";
 
   let themeValue: any;
   theme.subscribe((val) => {
@@ -41,6 +43,7 @@
   <Profile props={profile} id={id.profile} />
   <Skills id={id.skills} imgHeight={100} imgWidth={100} {skills} />
   <Projects id={id.projects} imgHeight={100} imgWidth={100} {projects} />
+  <Experiences id={id.experiences} {experiences} />
 
   <!-- <ProjectCard title={profile.name} description={profile.name} /> -->
 </div>

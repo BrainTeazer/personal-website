@@ -29,6 +29,9 @@ export default {
       gridTemplateColumns: {
         project: "repeat(auto-fill, minmax(16rem, 1fr))",
       },
+      maxWidth: {
+        experience: "37em",
+      },
     },
   },
   plugins: [],

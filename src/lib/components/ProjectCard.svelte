@@ -2,7 +2,7 @@
   import type { projectProps } from "../../data/projects";
   import { theme } from "../../stores";
   import Card from "./Card.svelte";
-  import Language from "./Language.svelte";
+  import Tag from "./Tag.svelte";
 
   export let props: projectProps;
 
@@ -22,7 +22,7 @@
   </a>
   <div class="flex gap-4 mt-4 lg:mt-auto flex-wrap justify-center">
     {#each props.languages as language}
-      <Language {language} />
+      <Tag tag={language} />
     {/each}
   </div>
 </Card>
