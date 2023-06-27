@@ -5,14 +5,15 @@
 
   export let id: string;
   export let projects: readonly projectProps[];
+
   export let imgHeight: number;
   export let imgWidth: number;
 </script>
 
 <Section title={"Projects"} {id}>
-  <div class="grid grid-cols-project auto-rows-project grid-cols-1 lg:grid-cols-2 gap-4 mt-8">
+  <div class="grid grid-cols-project auto-rows-project grid-cols-1 lg:grid-cols-4 gap-4 mt-8">
     {#each projects as project}
-      <ProjectCard props={project} {imgHeight} {imgWidth} />
+      <ProjectCard props={project} {imgHeight} {imgWidth} classProps={"last:self-center lg:col-span-2 lg:last:col-end-4"} />
     {/each}
   </div>
 </Section>

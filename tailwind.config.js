@@ -25,9 +25,11 @@ export default {
       },
       gridAutoRows: {
         project: "1fr",
+        skill: "1fr",
       },
       gridTemplateColumns: {
         project: "repeat(auto-fill, minmax(16rem, 1fr))",
+        skill: "repeat(auto-fill, minmax(16rem, 1fr))",
       },
       maxWidth: {
         experience: "37em",

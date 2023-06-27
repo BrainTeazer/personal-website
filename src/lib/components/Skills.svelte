@@ -10,9 +10,10 @@
 </script>
 
 <Section title={"Skills"} {id}>
-  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-8 justify-items-center">
+  <!-- <div class="flex lg:flex-row flex-wrap justify-center items-center gap-2 mt-8"> -->
+  <div class="grid grid-cols-skill auto-rows-skill grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
     {#each skills as skill}
-      <Card title={skill.name} imgSrc={skill.imgSrc} {imgWidth} {imgHeight} />
+      <Card title={skill.name} imgSrc={skill.imgSrc} {imgWidth} {imgHeight} classProp={"h-auto p-4 max-w-xs lg:max-w-xl"} />
     {/each}
   </div>
 </Section>
