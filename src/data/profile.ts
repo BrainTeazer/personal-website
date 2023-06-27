@@ -9,7 +9,7 @@ export type profileProp = {
 };
 
 export default {
-  imgSrc: "/src/lib/assets/profile.jpeg",
+  imgSrc: "./src/lib/assets/profile.jpeg",
   name: "Ayam Banjade",
   prelim: "Programmer | Music enjoyer | Neophile",
   description: `I am an undergrad studying Computer Science. I am an open-source enthusiast and enjoy learning/trying out new things, whether cutting-edge or just something I want to try.

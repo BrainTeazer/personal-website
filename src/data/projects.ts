@@ -1,4 +1,4 @@
-const projectPath = "src/lib/assets/projects/";
+const projectPath = "./src/lib/assets/projects/";
 
 export type projectProps = {
   title: string;
