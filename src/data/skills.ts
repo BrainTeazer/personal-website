@@ -1,4 +1,4 @@
-const logoPath = "./src/lib/assets/logos/";
+const logoPath = "./logos/";
 
 export type skillProps = {
   name: string;
