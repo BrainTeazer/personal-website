@@ -5,12 +5,14 @@
   import Tag from "./Tag.svelte";
 
   export let props: experienceProp;
+  export let classProps: string = "";
+
   const formatDate = (date: Date) => {
     return `${date.getUTCMonth() + 1}/${date.getUTCFullYear()}`;
   };
 </script>
 
-<Card title={props.title} classProp={"h-auto lg:h-96 p-8 max-w-xs lg:max-w-experience"}>
+<Card title={props.title} classProp="h-auto lg:h-96 p-8 max-w-xs lg:max-w-experience {classProps}">
   <div class="flex flex-col lg:flex-row gap-2 justify-between w-full">
     <div class="flex gap-2 order-1 lg:order-none">
       <CalendarIcon />

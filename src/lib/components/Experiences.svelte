@@ -7,9 +7,9 @@
 </script>
 
 <Section title="Experiences" {id}>
-  <div class="grid grid-cols-project auto-rows-project grid-cols-1 lg:grid-cols-2 gap-4 mt-8">
+  <div class="grid grid-cols-project auto-rows-project grid-cols-1 lg:grid-cols-4 gap-4 mt-8">
     {#each experiences as experience}
-      <ExperienceCard props={experience} />
+      <ExperienceCard props={experience} classProps={"last:self-center lg:col-span-2 lg:last:col-end-4"} />
     {/each}
   </div>
 </Section>
