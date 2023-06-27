@@ -1,37 +1,42 @@
 <script lang="ts">
   import { HomeIcon, CodeIcon, InfoIcon, BriefcaseIcon } from "svelte-feather-icons";
-  import { flip } from "svelte/animate";
   import { theme } from "../../stores";
   import { darkTheme } from "../../theme/darkTheme";
-  import type { SvelteComponent } from "svelte";
 
   export let profile: string;
   export let skills: string;
   export let projects: string;
-
-  let y: number;
 
   let themeValue: any;
   theme.subscribe((val) => {
     themeValue = val;
   });
 
-  $: hoverColor = themeValue == darkTheme ? "text-blue-500" : "text-orange-700";
-  console.log(hoverColor);
+  // $: hoverColor = themeValue == darkTheme ? "text-blue-500" : "text-orange-700";
+  let hoverColor = "text-blue-500";
 
-  type footerItem = {
-    icon: any;
-    href: string;
+  let y: number;
+
+  const scrollIntoView = ({ currentTarget }: any) => {
+    const scrollToElement = document.querySelector(currentTarget.getAttribute("href"));
+
+    if (!scrollToElement) return;
+
+    scrollToElement.scrollIntoView({
+      behavior: "smooth",
+    });
   };
 </script>
 
 <svelte:window bind:scrollY={y} />
 
 <div class="flex justify-center items-center">
-  <div class="flex m-4 fixed top-1/2 -translate-y-1/2 flex-col left-0 {themeValue.background} p-0.5 gap-4 shadow-card border-2 {themeValue.border} {themeValue.onBackground} transition-all p-2">
-    <a href="#{profile}" rel="noopener noreferrer"><HomeIcon class="hover:{hoverColor}" /></a>
-    <a href="#{skills}" rel="noopener noreferrer"><CodeIcon class="hover:{hoverColor}" /></a>
-    <a href="#{projects}" rel="noopener noreferrer"><BriefcaseIcon class="hover:{hoverColor}" /></a>
+  <div
+    class="flex m-4 fixed bottom-0 lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 lg:flex-col lg:left-0 {themeValue.background} p-0.5 gap-4 shadow-card border-2 {themeValue.border} {themeValue.onBackground} transition-all p-2"
+  >
+    <a href="#{profile}" on:click|preventDefault={scrollIntoView} rel="noopener noreferrer"><HomeIcon class="hover:text-blue-700" /></a>
+    <a href="#{skills}" on:click|preventDefault={scrollIntoView} rel="noopener noreferrer"><CodeIcon class="hover:text-blue-700" /></a>
+    <a href="#{projects}" on:click|preventDefault={scrollIntoView} rel="noopener noreferrer"><BriefcaseIcon class="hover:text-blue-700" /></a>
     <!-- <a href="#4" rel="noopener noreferrer"><InfoIcon class="hover:{hoverColor}" /></a> -->
   </div>
 </div>
