@@ -14,16 +14,16 @@
 
 <Card title={props.title} classProp="h-auto lg:h-96 p-8 max-w-xs lg:max-w-experience {classProps}">
   <div class="flex flex-col lg:flex-row gap-2 justify-between w-full">
-    <div class="flex gap-2 order-1 lg:order-none">
+    <div class="flex gap-2 order-1 lg:order-none font-ibm-plex-serif">
       <CalendarIcon />
       {formatDate(props.date[0])} - {formatDate(props.date[1])}
     </div>
-    <a href={props.organization.href} target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-zinc-700">
+    <a href={props.organization.href} target="_blank" rel="noopener noreferrer" class="font-ibm-plex-serif text-zinc-500 hover:text-zinc-700">
       {props.organization.name}
     </a>
   </div>
 
-  <ul class="list-disc list-inside self-start p-4">
+  <ul class="list-disc list-inside self-start p-4 font-ibm-plex-serif">
     {#each props.description as description}
       <li class="mt-4">{description}</li>
     {/each}
