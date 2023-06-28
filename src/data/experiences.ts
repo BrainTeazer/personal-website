@@ -1,7 +1,7 @@
 export type experienceProp = {
   title: string;
   organization: any;
-  date: [Date, Date];
+  date: Date[];
   description: string[];
   keywords: string[];
 };

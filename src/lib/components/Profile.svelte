@@ -11,6 +11,8 @@
   export let props: profileProp;
   export let id: string;
 
+  export let el: any;
+
   function swipeColor(node: any, params: any) {
     const { duration, delay, easing } = params || {};
     const { color } = window.getComputedStyle(node);
@@ -45,7 +47,7 @@
 </script>
 
 {#if ready}
-  <div class="flex flex-col justify-center items-center gap-2 m-4 {themeValue.onBackground}" {id}>
+  <div class="flex flex-col justify-center items-center gap-2 m-4 {themeValue.onBackground}" {id} bind:this={el}>
     <div class="flex flex-col lg:flex-row items-center gap-4 justify-center items-center">
       <img src={props.imgSrc} alt="" class="rounded-profile-image gap-4 lg:w-1/5 {themeValue.boxShadow} border-2 {themeValue.border} row-start-1 col-start-1 row-end-5 col-end-2" />
       <div class="flex flex-col lg:w-2/5 text-center lg:text-left">

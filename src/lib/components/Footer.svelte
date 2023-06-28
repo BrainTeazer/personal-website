@@ -2,7 +2,6 @@
   import { HomeIcon, CodeIcon, InfoIcon, BriefcaseIcon, BookIcon } from "svelte-feather-icons";
   import { theme } from "../../stores";
   import { darkTheme } from "../../theme/darkTheme";
-
   export let profile: string;
   export let skills: string;
   export let projects: string;
@@ -16,8 +15,6 @@
   // $: hoverColor = themeValue == darkTheme ? "text-blue-500" : "text-orange-700";
   let hoverColor = "text-blue-500";
 
-  let y: number;
-
   const scrollIntoView = ({ currentTarget }: any) => {
     const scrollToElement = document.querySelector(currentTarget.getAttribute("href"));
 
@@ -28,8 +25,6 @@
     });
   };
 </script>
-
-<svelte:window bind:scrollY={y} />
 
 <div class="flex justify-center items-center">
   <div
