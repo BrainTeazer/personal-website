@@ -54,6 +54,20 @@ export default [
     source: "https://github.com/BrainTeazer/marsphotos-demo-kotlin",
   },
   {
+    title: "Todo App",
+    imgSrc: projectPath + "todo.png",
+    description: "Multi-page todo app",
+    languages: ["Flutter"],
+    source: "https://github.com/BrainTeazer/todo_app_flutter",
+  },
+  {
+    title: "Weather App",
+    imgSrc: projectPath + "weather.png",
+    description: "Multi-page weather app",
+    languages: ["Flutter"],
+    source: "https://github.com/BrainTeazer/weather_app_flutter",
+  },
+  {
     title: "Source Code",
     imgSrc: projectPath + "source.png",
     description: "Source code of personal website hosted on Github Pages",
