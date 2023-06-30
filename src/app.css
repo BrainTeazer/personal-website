@@ -28,3 +28,7 @@ body {
 .active {
   color: darkolivegreen;
 }
+
+::selection {
+  background-color: #f4a384;
+}
