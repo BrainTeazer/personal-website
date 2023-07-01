@@ -8,6 +8,8 @@ export type profileProp = {
   links: any;
 };
 
+const date = new Date();
+
 export default {
   imgSrc: "./profile.jpeg",
   name: "Ayam Banjade",
@@ -15,7 +17,7 @@ export default {
   description: `I am an undergrad studying Computer Science. I am an open-source enthusiast and enjoy learning/trying out new things, whether cutting-edge or just something I want to try.
     I love music and the command line. `,
   buttonText: "Resume",
-  resumeSrc: "./documents/Ayam_Banjade_Resume_2023_JUNE.pdf",
+  resumeSrc: `./documents/Ayam_Banjade_Resume_${date.getFullYear()}_${date.toLocaleString("default", { month: "long" })}.pdf`,
   links: {
     linkedin: "https://www.linkedin.com/in/ayambanjade",
     github: "https://github.com/BrainTeazer",
