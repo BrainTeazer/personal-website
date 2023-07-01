@@ -20,5 +20,6 @@ export default {
     linkedin: "https://www.linkedin.com/in/ayambanjade",
     github: "https://github.com/BrainTeazer",
     mail: "mailto:ayam.banjade@gmail.com",
+    number: "tel:+4915752730515",
   },
 } as const;

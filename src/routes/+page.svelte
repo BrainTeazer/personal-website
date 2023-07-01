@@ -1,6 +1,5 @@
 <script lang="ts">
   import Profile from "$lib/components/Profile.svelte";
-  import Footer from "$lib/components/Footer.svelte";
   import profile from "./../data/profile";
   import skills from "./../data/skills";
   import projects from "./../data/projects";
@@ -14,6 +13,7 @@
   import { theme } from "./../stores";
   import Experiences from "$lib/components/Experiences.svelte";
   import { afterUpdate } from "svelte";
+  import Sidebar from "$lib/components/Sidebar.svelte";
 
   let themeValue: any;
   theme.subscribe((val) => {
@@ -69,4 +69,4 @@
   <Projects id={id.projects} imgHeight={100} imgWidth={100} {projects} bind:el={projectsContainer} />
   <Experiences id={id.experiences} {experiences} bind:el={experiencesContainer} />
 </div>
-<Footer {...id} />
+<Sidebar {...id} />

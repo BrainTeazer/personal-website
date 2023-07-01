@@ -6,7 +6,8 @@
   onMount(() => (ready = true));
   import Button from "./Button.svelte";
   import { theme } from "../../stores";
-  import { GithubIcon, LinkedinIcon, MailIcon } from "svelte-feather-icons";
+  import { GithubIcon, LinkedinIcon, MailIcon, PhoneIcon } from "svelte-feather-icons";
+  import ContactItem from "./ContactItem.svelte";
 
   export let props: profileProp;
   export let id: string;
@@ -63,9 +64,10 @@
       </div>
     </div>
     <div class="flex gap-4 mb-4">
-      <a href={props.links.linkedin} target="_blank" rel="noopener noreferrer"><LinkedinIcon class="hover:text-blue-500" /></a>
-      <a href={props.links.github} target="_blank" rel="noopener noreferrer"><GithubIcon class="hover:text-slate-500" /></a>
-      <a href={props.links.mail} target="_blank" rel="noopener noreferrer"><MailIcon class="hover:text-green-500" /></a>
+      <ContactItem href={props.links.linkedin} icon={LinkedinIcon} classProps={"hover:text-blue-500"} />
+      <ContactItem href={props.links.github} icon={GithubIcon} classProps={"hover:text-slate-500"} />
+      <ContactItem href={props.links.mail} icon={MailIcon} classProps={"hover:text-green-500"} />
+      <ContactItem href={props.links.number} icon={PhoneIcon} classProps={"hover:text-gray-500"} />
     </div>
     <Button text={props.buttonText} href={props.resumeSrc} classProp={"transition-all duration-300"} />
   </div>
