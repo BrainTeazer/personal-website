@@ -14,8 +14,11 @@ export default {
   imgSrc: "./profile.jpeg",
   name: "Ayam Banjade",
   prelim: "Programmer | Music enjoyer | Neophile",
-  description: `I am an undergrad studying Computer Science. I am an open-source enthusiast and enjoy learning/trying out new things, whether cutting-edge or just something I want to try.
-    I love music and the command line. `,
+  description: `
+    I am an undergrad studying Computer Science. 
+    I am an open-source enthusiast and enjoy learning/trying out new things, whether cutting-edge or just something I want to try.
+    I love music, playing sports, and the command line. 
+  `,
   buttonText: "Resume",
   resumeSrc: `./documents/Ayam_Banjade_Resume_${date.getFullYear()}_${date.toLocaleString("default", { month: "long" })}.pdf`,
   links: {
