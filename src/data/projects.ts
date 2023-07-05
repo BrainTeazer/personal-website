@@ -72,6 +72,6 @@ export default [
     imgSrc: projectPath + "source.png",
     description: "Source code of personal website hosted on Github Pages",
     languages: ["Typescript", "Svelte", "Tailwind CSS"],
-    source: "https://github.com/BrainTeazer/brainteazer.github.io/tree/svelte-ts",
+    source: "https://github.com/BrainTeazer/personal-website/tree/svelte-ts",
   },
 ] as const;
