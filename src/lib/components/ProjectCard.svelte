@@ -17,7 +17,7 @@
   });
 </script>
 
-<Card title={props.title} imgSrc={props.imgSrc} {imgHeight} {imgWidth} classProp="h-96 p-8 max-w-xs lg:max-w-xl {classProps}" imgProp={"mt-8"}>
+<Card title={props.title} imgSrc={props.imgSrc} {imgHeight} {imgWidth} classProp="h-96 p-8 max-w-xs sm:h-auto md:max-w-xl lg:max-w-xl xl:max-w-xl {classProps}" imgProp={"mt-8"}>
   <div class="font-ibm-plex-serif {themeValue.onSecondary} text-center">{props.description}</div>
   <a href={props.source} target="_blank" rel="noopener noreferrer" class="hover:underline text-stone-400 hover:decoration-indigo-500 hover:text-blue-700 mt-5 transition-all duration-300 ease-linear">
     Source

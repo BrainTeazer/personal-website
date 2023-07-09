@@ -8,6 +8,20 @@
   export let projects: string;
   export let experiences: string;
 
+  let y: number;
+  let newY: number[] = [];
+
+  $: oldY = newY[1];
+
+  function updateY(event: any) {
+    // y(Event) overshadows the locally declared and bound y(window.scrollY, a Number)
+    newY.push(y); // Is a mutation so svelte won't nofity changes
+    if (newY.length > 5) {
+      newY.shift(); // Again
+    }
+    newY = newY;
+  }
+
   let themeValue: any;
   theme.subscribe((val) => {
     themeValue = val;
@@ -18,9 +32,11 @@
   const classProps = "flex gap-1 hover:text-blue-700";
 </script>
 
+<svelte:window on:scroll={updateY} bind:scrollY={y} />
+
 <div class="flex justify-center items-center">
   <div
-    class="group flex m-4 fixed bottom-0 lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 lg:flex-col lg:left-0 {themeValue.background} p-0.5 gap-4 shadow-card border-2 {themeValue.border} {themeValue.onBackground} p-2"
+    class="group flex m-4 fixed bottom-0 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:flex-col md:left-0 lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 lg:flex-col lg:left-0 {themeValue.background} p-0.5 gap-4 shadow-card border-2 {themeValue.border} {themeValue.onBackground} p-2"
   >
     <SidebarItem href="#{profile}" name={profile} {classProps} icon={HomeIcon} />
     <SidebarItem href="#{skills}" name={skills} {classProps} icon={BookIcon} />
