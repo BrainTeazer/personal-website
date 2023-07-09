@@ -12,7 +12,7 @@
 </script>
 
 <Section title={"Projects"} {id} bind:el>
-  <div class="grid grid-cols-project auto-rows-project grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 mt-8">
+  <div class="grid grid-cols-project auto-rows-project grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-8">
     {#each projects as project}
       <ProjectCard props={project} {imgHeight} {imgWidth} classProps={"last:self-center md:col-span-2 lg:col-span-2 xl:col-span-2 xl:last:col-end-4"} />
     {/each}
