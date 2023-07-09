@@ -11,7 +11,7 @@
 </script>
 
 <Section title={"Skills"} {id} bind:el>
-  <div class="grid grid-cols-skill auto-rows-skill grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+  <div class="grid grid-cols-skill auto-rows-skill grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
     {#each skills as skill}
       <Card title={skill.name} imgSrc={skill.imgSrc} {imgWidth} {imgHeight} classProp={"h-auto p-4 max-w-xs lg:max-w-xl"} imgProp="w-24" />
     {/each}

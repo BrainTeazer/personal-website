@@ -19,6 +19,6 @@
   {#if imgSrc}
     <img src={imgSrc} alt="" class={imgProp} style="width:{imgWidth}px;height:{imgHeight}px" />
   {/if}
-  <div class="font-space-grotesk font-bold text-2xl">{title}</div>
+  <div class="font-space-grotesk font-bold text-2xl text-center">{title}</div>
   <slot />
 </div>

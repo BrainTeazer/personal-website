@@ -49,16 +49,17 @@
 
 {#if ready}
   <div class="flex flex-col justify-center items-center gap-2 m-4 {themeValue.onBackground}" {id} bind:this={el}>
-    <div class="flex flex-col lg:flex-row items-center gap-4 justify-center items-center">
+    <div class="flex flex-col md:flex-row lg:flex-row items-center gap-4 justify-center items-center">
       <img
         src={props.imgSrc}
         alt=""
-        class="rounded-profile-image gap-4 landscape:w-1/5 w-3/5 lg:w-1/5 {themeValue.boxShadow} border-2 {themeValue.border} row-start-1 col-start-1 row-end-5 col-end-2"
+        class="rounded-profile-image gap-4 w-2/5 landscape:w-1/5 w-3/5 sm:w-2/5 md:w-1/5 lg:w-1/5 {themeValue.boxShadow} border-2 {themeValue.border} row-start-1 col-start-1 row-end-5 col-end-2"
       />
-      <div class="flex flex-col lg:w-2/5 text-center lg:text-left">
+      <div class="flex flex-col sm:w-4/5 lg:w-2/5 md:w-3/5 text-center md:text-left lg:text-left">
         <div class="font-ibm-plex-serif {themeValue.onSecondary}">Hello there :-)</div>
 
         <div class="font-space-grotesk text-4xl mt-2 mb-2" transition:swipeColor={{ delay: 0 }}>I'm {props.name}.</div>
+
         <div class="font-space-grotesk text-2xl mb-2">{props.prelim}</div>
         <div class="font-ibm-plex-serif {themeValue.onSecondary}">{props.description}</div>
       </div>

@@ -12,9 +12,9 @@
   };
 </script>
 
-<Card title={props.title} classProp="h-auto lg:h-96 p-8 max-w-xs lg:max-w-experience {classProps}">
-  <div class="flex flex-col lg:flex-row gap-2 justify-between w-full">
-    <div class="flex gap-2 order-1 lg:order-none font-ibm-plex-serif">
+<Card title={props.title} classProp="h-auto sm:h-96 lg:h-96 p-8 max-w-xs sm:max-w-experience {classProps}">
+  <div class="flex flex-col sm:flex-row gap-2 justify-between w-full">
+    <div class="flex gap-2 order-1 sm:order-none font-ibm-plex-serif justify-center sm:justify-start">
       <CalendarIcon />
       {formatDate(props.date[0])} - {formatDate(props.date[1])}
     </div>
@@ -23,7 +23,7 @@
     </a>
   </div>
 
-  <ul class="list-disc list-inside self-start p-4 font-ibm-plex-serif">
+  <ul class="list-disc list-inside self-start p-4 font-ibm-plex-serif text-center">
     {#each props.description as description}
       <li class="mt-4">{description}</li>
     {/each}
