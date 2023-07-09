@@ -53,7 +53,7 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="flex flex-col items-center gap-16 {themeValue.background} {themeValue.onBackground} pb-8 lg:pt-32 md:pt-32">
+<div class="flex flex-col items-center gap-16 {themeValue.background} {themeValue.onBackground} pb-8 pt-16 sm:pt-32">
   <!-- {#if darkMode}
     <div on:click={darkModeToggle}>
       <SunIcon class="float-right right-0 m-8" />

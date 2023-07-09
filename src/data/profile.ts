@@ -15,8 +15,9 @@ export default {
   name: "Ayam Banjade",
   prelim: "Programmer | Music enjoyer | Neophile",
   description: `
-    I am an undergrad CS student.\n
-    I am an open-source enthusiast and enjoy learning/trying out new things, whether cutting-edge or just something I want to try.
+    I am an undergrad CS student
+    and an open-source enthusiast.
+    I enjoy learning/trying out new things, whether cutting-edge or just something I want to try.
     I love music, playing sports, and the command line.
   `,
   buttonText: "Resume",

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { CalendarIcon } from "svelte-feather-icons";
+  import { CalendarIcon, ChevronDownIcon, ChevronUpIcon } from "svelte-feather-icons";
   import type { experienceProp } from "../../data/experiences";
   import Card from "./Card.svelte";
   import Tag from "./Tag.svelte";
@@ -12,7 +12,7 @@
   };
 </script>
 
-<Card title={props.title} classProp="h-auto sm:h-96 lg:h-96 p-8 max-w-xs sm:max-w-experience {classProps}">
+<Card title={props.title} classProp="h-auto sm:h-96 p-8 max-w-xs sm:max-w-experience {classProps}">
   <div class="flex flex-col sm:flex-row gap-2 justify-between w-full">
     <div class="flex gap-2 order-1 sm:order-none font-ibm-plex-serif justify-center sm:justify-start">
       <CalendarIcon />
