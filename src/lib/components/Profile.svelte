@@ -2,15 +2,12 @@
   import type { profileProp } from "../../data/profile";
   import { onMount } from "svelte";
 
-  let ready = false;
   onMount(() => {
-    ready = true;
-    window.matchMedia("(max-width: 639px)").addEventListener("change", (event) => {
-      if (event.matches == true) {
-        visible = false;
-      } else {
-        visible = true;
-      }
+    let media = window.matchMedia("(max-width: 639px)");
+    visible = !media.matches;
+    
+    media.addEventListener("change", (event) => {
+      visible = !event.matches;
     });
   });
   import Button from "./Button.svelte";
@@ -67,7 +64,6 @@
   });
 </script>
 
-{#if ready}
   <div class="flex flex-col justify-center items-center overflow-hidden gap-2 m-4 {themeValue.onBackground}" {id} bind:this={el}>
     <div class="flex flex-col md:flex-row lg:flex-row items-center gap-4 justify-center items-center">
       <img
@@ -85,14 +81,16 @@
           </div>
         </div>
 
+        
         <button on:click|preventDefault={toggleDescription} class="flex justify-center items-center order-1 {showDescriptionIconProps}">
           <svelte:component this={showDescriptionIcon} class="mb-4 sm:hidden" />
         </button>
-
         {#if visible}
           <div class="flex flex-col sm:opacity-100 sm:max-h-none" transition:slide>
             <div class="font-ibm-plex-serif {themeValue.onSecondary}">{props.description}</div>
           </div>
+        
+        
         {/if}
       </div>
     </div>
@@ -105,4 +103,3 @@
     </div>
     <Button text={props.buttonText} href={props.resumeSrc} classProp={"transition-all duration-300"} />
   </div>
-{/if}

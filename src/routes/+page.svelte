@@ -14,12 +14,14 @@
   import Experiences from "$lib/components/Experiences.svelte";
   import { afterUpdate } from "svelte";
   import Sidebar from "$lib/components/Sidebar.svelte";
+  import type { PageData } from "./$types";
 
   let themeValue: any;
   theme.subscribe((val) => {
     themeValue = val;
   });
 
+  
   let y: any;
 
   let darkMode: boolean = themeValue == darkTheme ? true : false;
@@ -49,10 +51,17 @@
       }
     });
   });
+
+
+  export let data : PageData;
+
 </script>
 
 <svelte:window bind:scrollY={y} />
 
+{#await data.streamed.ready}
+  <div class='font-ibm-plex-serif'>Loading...</div>
+{:then value}
 <div class="flex flex-col items-center gap-16 {themeValue.background} {themeValue.onBackground} pb-8 pt-16 sm:pt-32">
   <!-- {#if darkMode}
     <div on:click={darkModeToggle}>
@@ -70,3 +79,6 @@
   <Experiences id={id.experiences} {experiences} bind:el={experiencesContainer} />
 </div>
 <Sidebar {...id} />
+{:catch error}
+ {error.message}
+{/await}

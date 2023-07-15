@@ -38,7 +38,20 @@ export default {
       },
       maxWidth: {
         experience: "37em",
+        skillLg: "calc(100% * (1/5))",
+        skillSm: "calc(100% * (1/4))",
+        skill: "calc(100% * (1/3))",
       },
+      width: {
+        skill: "calc(100% * (1/3))",
+        skills: "calc(10em * 3)",
+        
+        skillSm: "calc(100% * (1/4))",
+        skillsSm: "calc(10em * 4)",
+
+        skillLg: "calc(100% * (1/5))",
+        skillsLg: "calc(10em * 5)",
+      }
     },
   },
   plugins: [],
