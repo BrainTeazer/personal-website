@@ -42,7 +42,7 @@
       <div class="font-ibm-plex-serif {themeValue.onSecondary}">Hello there :-)</div>
 
       <div class="flex flex-col items-center md:items-start gap-2">
-        <div class="font-space-grotesk text-4xl mt-2 mb-2" transition:swipeColor={{ delay: 0 }}>I'm {props.name}.</div>
+        <div class="font-space-grotesk text-4xl mt-2 mb-2" transition:swipeColor={{ delay: 500 }}>I'm {props.name}.</div>
         <div class="font-space-grotesk text-2xl mb-2">
           {props.prelim}
         </div>
