@@ -1,26 +1,12 @@
 <script lang="ts">
   import { HomeIcon, CodeIcon, InfoIcon, BriefcaseIcon, BookIcon } from "svelte-feather-icons";
-  import { theme } from "../../stores";
+  import { theme } from "$lib/../stores";
   import { darkTheme } from "../../theme/darkTheme";
   import SidebarItem from "./SidebarItem.svelte";
   export let profile: string;
   export let skills: string;
   export let projects: string;
   export let experiences: string;
-
-  let y: number;
-  let newY: number[] = [];
-
-  $: oldY = newY[1];
-
-  function updateY(event: any) {
-    // y(Event) overshadows the locally declared and bound y(window.scrollY, a Number)
-    newY.push(y); // Is a mutation so svelte won't nofity changes
-    if (newY.length > 5) {
-      newY.shift(); // Again
-    }
-    newY = newY;
-  }
 
   let themeValue: any;
   theme.subscribe((val) => {
@@ -31,8 +17,6 @@
 
   const classProps = "flex gap-1 hover:text-blue-700";
 </script>
-
-<svelte:window on:scroll={updateY} bind:scrollY={y} />
 
 <div class="flex justify-center items-center">
   <div

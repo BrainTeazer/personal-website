@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { theme } from "../../stores";
+  import { theme } from "$lib/../stores";
 
   export let text: string;
   export let href: string = "";

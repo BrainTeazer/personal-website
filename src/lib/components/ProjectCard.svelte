@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { projectProps } from "../../data/projects";
-  import { theme } from "../../stores";
+  import type { projectProps } from "$lib/data/projects";
+  import { theme } from "$lib/../stores";
   import Card from "./Card.svelte";
   import Tag from "./Tag.svelte";
 

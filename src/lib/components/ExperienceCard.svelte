@@ -1,15 +1,12 @@
 <script lang="ts">
-  import { CalendarIcon, ChevronDownIcon, ChevronUpIcon } from "svelte-feather-icons";
-  import type { experienceProp } from "../../data/experiences";
+  import { CalendarIcon } from "svelte-feather-icons";
+  import type { experienceProp } from "$lib/data/experiences";
   import Card from "./Card.svelte";
   import Tag from "./Tag.svelte";
+  import { formatDate } from "$lib/functions/formatDate";
 
   export let props: experienceProp;
   export let classProps: string = "";
-
-  const formatDate = (date: Date) => {
-    return `${date.getUTCMonth() + 1}/${date.getUTCFullYear()}`;
-  };
 </script>
 
 <Card title={props.title} classProp="h-auto sm:h-96 p-8 max-w-xs sm:max-w-experience {classProps}">
