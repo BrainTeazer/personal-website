@@ -1,10 +1,10 @@
 <script lang="ts">
   import Profile from "$lib/components/Profile.svelte";
-  import profile from "./../data/profile";
-  import skills from "./../data/skills";
-  import projects from "./../data/projects";
-  import experiences from "./../data/experiences";
-  import id from "./../data/id";
+  import profile from "$lib/data/profile";
+  import skills from "$lib/data/skills";
+  import projects from "$lib/data/projects";
+  import experiences from "$lib/data/experiences";
+  import id from "$lib/data/id";
   import Skills from "$lib/components/Skills.svelte";
   import Projects from "$lib/components/Projects.svelte";
   import { MoonIcon, SunIcon } from "svelte-feather-icons";
@@ -21,7 +21,6 @@
     themeValue = val;
   });
 
-  
   let y: any;
 
   let darkMode: boolean = themeValue == darkTheme ? true : false;
@@ -52,18 +51,16 @@
     });
   });
 
-
-  export let data : PageData;
-
+  export let data: PageData;
 </script>
 
 <svelte:window bind:scrollY={y} />
 
 {#await data.streamed.ready}
-  <div class='font-ibm-plex-serif'>Loading...</div>
+  <div class="font-ibm-plex-serif">Loading...</div>
 {:then value}
-<div class="flex flex-col items-center gap-16 {themeValue.background} {themeValue.onBackground} pb-8 pt-16 sm:pt-32">
-  <!-- {#if darkMode}
+  <div class="flex flex-col items-center gap-16 {themeValue.background} {themeValue.onBackground} pb-8 pt-16 sm:pt-32">
+    <!-- {#if darkMode}
     <div on:click={darkModeToggle}>
       <SunIcon class="float-right right-0 m-8" />
     </div>
@@ -72,13 +69,13 @@
       <MoonIcon class="float-right right-0 m-8" />
     </div>
   {/if} -->
-  <Profile props={profile} id={id.profile} bind:el={profileContainer} />
+    <Profile props={profile} id={id.profile} bind:el={profileContainer} />
 
-  <Skills id={id.skills} imgHeight={100} imgWidth={100} {skills} bind:el={skillsContainer} />
-  <Projects id={id.projects} imgHeight={100} imgWidth={100} {projects} bind:el={projectsContainer} />
-  <Experiences id={id.experiences} {experiences} bind:el={experiencesContainer} />
-</div>
-<Sidebar {...id} />
+    <Skills id={id.skills} imgHeight={100} imgWidth={100} {skills} bind:el={skillsContainer} />
+    <Projects id={id.projects} imgHeight={100} imgWidth={100} {projects} bind:el={projectsContainer} />
+    <Experiences id={id.experiences} {experiences} bind:el={experiencesContainer} />
+  </div>
+  <Sidebar {...id} />
 {:catch error}
- {error.message}
+  {error.message}
 {/await}

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { theme } from "../../stores";
+  import { theme } from "$lib/../stores";
   import Title from "./Title.svelte";
   export let title: string;
   export let id: string;

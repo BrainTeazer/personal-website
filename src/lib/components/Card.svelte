@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { theme } from "../../stores";
+  import { theme } from "$lib/../stores";
 
   export let title: string;
   export let imgSrc: string = "";

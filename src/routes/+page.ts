@@ -1,9 +1,9 @@
 /** @type {import('./$types').PageLoad} */
 export const load: PageLoad = () => {
-    return {
-        streamed:{
-            ready: Promise.resolve(true)
-        } 
+  return {
+    streamed: {
+      ready: Promise.resolve(true),
+    },
     //     two: Promise.resolve(2),
     //     streamed: {
     //         three: new Promise((fulfil) => {
@@ -12,5 +12,5 @@ export const load: PageLoad = () => {
     //             }, 1000);
     //         })
     //     }
-    };
-}
+  };
+};

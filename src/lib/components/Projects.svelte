@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { projectProps } from "../../data/projects";
+  import type { projectProps } from "$lib/data/projects";
   import ProjectCard from "./ProjectCard.svelte";
   import Section from "./Section.svelte";
 

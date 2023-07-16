@@ -13,7 +13,7 @@ const date = new Date();
 export default {
   imgSrc: "./profile.jpeg",
   name: "Ayam Banjade",
-  prelim: "Programmer | Music Lover | Neophile",
+  prelim: "Programmer | Student | Neophile",
   description: `
     I am an undergrad CS student
     and an open-source enthusiast.

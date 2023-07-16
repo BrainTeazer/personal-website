@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { skillProps } from "../../data/skills";
+  import type { skillProps } from "$lib/data/skills";
   import Card from "./Card.svelte";
   import Section from "./Section.svelte";
 
@@ -14,7 +14,14 @@
   <!-- <div class="grid grid-cols-skill auto-rows-skill grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-8  gap-4 mt-8"> -->
   <div class="flex flex-wrap justify-center items-center w-skills sm:w-skillsSm lg:w-skillsLg gap-4 mt-8">
     {#each skills as skill}
-      <Card title={skill.name} imgSrc={skill.imgSrc} {imgWidth} {imgHeight} classProp={"h-auto w-0 p-4 min-w-0 max-w-skill w-skill sm:max-w-skillSm sm:w-skillSm lg:max-w-skillLg lg:w-skillLg grow"} imgProp="w-24" />
+      <Card
+        title={skill.name}
+        imgSrc={skill.imgSrc}
+        {imgWidth}
+        {imgHeight}
+        classProp={"h-auto w-0 p-4 min-w-0 max-w-skill w-skill sm:max-w-skillSm sm:w-skillSm lg:max-w-skillLg lg:w-skillLg grow"}
+        imgProp="w-24"
+      />
     {/each}
   </div>
 </Section>

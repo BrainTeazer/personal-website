@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { experienceProp } from "../../data/experiences";
+  import type { experienceProp } from "$lib/data/experiences";
   import ExperienceCard from "./ExperienceCard.svelte";
   import Section from "./Section.svelte";
   export let id: string;
