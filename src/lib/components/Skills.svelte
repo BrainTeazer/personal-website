@@ -11,7 +11,6 @@
 </script>
 
 <Section title={"Skills"} {id} bind:el>
-  <!-- <div class="grid grid-cols-skill auto-rows-skill grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-8  gap-4 mt-8"> -->
   <div class="flex flex-wrap justify-center items-center w-skills sm:w-skillsSm lg:w-skillsLg gap-4 mt-8">
     {#each skills as skill}
       <Card

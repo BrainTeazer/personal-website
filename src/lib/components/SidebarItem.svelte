@@ -1,15 +1,16 @@
 <script lang="ts">
+  import { capitalizeFirstLetter } from "$lib/functions/capitalizeFirstLetter";
   import { scrollIntoView } from "$lib/functions/scrollIntoView";
+  import Link from "./Link.svelte";
 
   export let href: string;
   export let scrollIntoViewHandler = scrollIntoView;
 
   export let classProps: string;
-  export let icon: any;
+  export let icon: ConstructorOfATypedSvelteComponent;
   export let name: string;
 </script>
 
-<a {href} on:click|preventDefault={scrollIntoViewHandler} rel="noopener noreferrer" class="group {classProps}" title={name.charAt(0).toUpperCase() + name.slice(1)}>
+<Link {href} onclick={scrollIntoViewHandler} {classProps} title={capitalizeFirstLetter(name)}>
   <svelte:component this={icon} />
-  <!-- <div class="hidden group-hover:block capitalize font-ibm-plex-serif">{name}</div> -->
-</a>
+</Link>

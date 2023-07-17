@@ -1,9 +1,11 @@
 <script lang="ts">
+  import Link from "./Link.svelte";
+
   export let href: string;
   export let icon: ConstructorOfATypedSvelteComponent;
   export let classProps: string;
 </script>
 
-<a {href} target="_blank" rel="noopener noreferrer" class={classProps}>
+<Link {href} {classProps}>
   <svelte:component this={icon} />
-</a>
+</Link>

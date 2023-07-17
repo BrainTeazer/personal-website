@@ -24,26 +24,20 @@
   export let props: profileProp;
   export let id: string;
   export let el: any;
-
-  let themeValue: any;
-  theme.subscribe((val) => {
-    themeValue = val;
-  });
 </script>
 
-<div class="flex flex-col justify-center items-center overflow-hidden gap-2 m-4 {themeValue.onBackground}" {id} bind:this={el}>
+<div class="flex flex-col justify-center items-center overflow-hidden gap-2 m-4 p-0.5 {$theme.onBackground}" {id} bind:this={el}>
   <div class="flex flex-col md:flex-row lg:flex-row items-center gap-4 justify-center items-center">
     <img
       src={props.imgSrc}
-      alt=""
-      class="rounded-profile-image gap-4 w-60 landscape:w-1/5 sm:w-2/5 md:w-3/12 lg:w-1/5 {themeValue.boxShadow} border-2 {themeValue.border} row-start-1 col-start-1 row-end-5 col-end-2"
+      alt="profile pic"
+      class="rounded-profile-image gap-4 w-60 landscape:w-1/5 sm:w-2/5 md:w-3/12 lg:w-1/5 {$theme.boxShadow} border-2 {$theme.border} row-start-1 col-start-1 row-end-5 col-end-2"
     />
     <div class="flex flex-col sm:w-4/5 lg:w-2/5 md:w-3/5 text-center md:text-left lg:text-left">
-      <div class="font-ibm-plex-serif {themeValue.onSecondary}">Hello there :-)</div>
-
-      <div class="flex flex-col items-center md:items-start gap-2">
-        <div class="font-space-grotesk text-4xl mt-2 mb-2" transition:swipeColor={{ delay: 500 }}>I'm {props.name}.</div>
-        <div class="font-space-grotesk text-2xl mb-2">
+      <div class="flex flex-col items-center md:items-start gap-2 font-space-grotesk">
+        <div class="font-ibm-plex-serif {$theme.onSecondary}">Hello there :-)</div>
+        <div class="text-4xl mt-2 mb-2" transition:swipeColor={{ delay: 500 }}>I'm {props.name}.</div>
+        <div class="text-2xl mb-2">
           {props.prelim}
         </div>
       </div>
@@ -58,7 +52,7 @@
       </button>
       {#if visible}
         <div class="flex flex-col sm:opacity-100 sm:max-h-none" transition:slide>
-          <div class="font-ibm-plex-serif {themeValue.onSecondary}">{props.description}</div>
+          <div class="font-ibm-plex-serif {$theme.onSecondary}">{props.description}</div>
         </div>
       {/if}
     </div>

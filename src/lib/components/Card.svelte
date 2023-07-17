@@ -8,14 +8,10 @@
   export let classProp: string = "";
   export let imgProp: string = "";
 
-  let themeValue: any;
-  theme.subscribe((val) => {
-    themeValue = val;
-  });
   //   export let date: string;
 </script>
 
-<div class="hover:scale-105 flex flex-col justify-center items-center {themeValue.background} p-0.5 {themeValue.boxShadow} border-2 {themeValue.border} {classProp}">
+<div class="hover:scale-105 flex flex-col justify-center items-center {$theme.background} p-0.5 {$theme.boxShadow} border-2 {$theme.border} {classProp}">
   {#if imgSrc}
     <img src={imgSrc} alt="" class={imgProp} style="width:{imgWidth}px;height:{imgHeight}px" />
   {/if}
