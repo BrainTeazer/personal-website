@@ -1,3 +1,4 @@
 export const formatDate = (date: Date) => {
-  return `${date.getUTCMonth() + 1}/${date.getUTCFullYear()}`;
+  const isoDate: string = date.toISOString().split("T")[0];
+  return `${isoDate.substring(5, 7)}/${isoDate.substring(0, 4)}`;
 };

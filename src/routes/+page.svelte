@@ -16,14 +16,9 @@
   import Sidebar from "$lib/components/Sidebar.svelte";
   import type { PageData } from "./$types";
 
-  let themeValue: any;
-  theme.subscribe((val) => {
-    themeValue = val;
-  });
-
   let y: any;
 
-  let darkMode: boolean = themeValue == darkTheme ? true : false;
+  let darkMode: boolean = $theme == darkTheme ? true : false;
 
   const darkModeToggle = () => {
     darkMode = !darkMode;
@@ -59,7 +54,7 @@
 {#await data.streamed.ready}
   <div class="font-ibm-plex-serif">Loading...</div>
 {:then value}
-  <div class="flex flex-col items-center gap-16 {themeValue.background} {themeValue.onBackground} pb-8 pt-16 sm:pt-32">
+  <div class="flex flex-col items-center gap-16 {$theme.background} {$theme.onBackground} pb-8 pt-16 sm:pt-32">
     <!-- {#if darkMode}
     <div on:click={darkModeToggle}>
       <SunIcon class="float-right right-0 m-8" />
@@ -70,7 +65,6 @@
     </div>
   {/if} -->
     <Profile props={profile} id={id.profile} bind:el={profileContainer} />
-
     <Skills id={id.skills} imgHeight={100} imgWidth={100} {skills} bind:el={skillsContainer} />
     <Projects id={id.projects} imgHeight={100} imgWidth={100} {projects} bind:el={projectsContainer} />
     <Experiences id={id.experiences} {experiences} bind:el={experiencesContainer} />
