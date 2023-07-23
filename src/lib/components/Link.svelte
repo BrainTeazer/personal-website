@@ -5,6 +5,12 @@
   export let title: string = "";
 </script>
 
-<a {href} target="_blank" rel="noopener noreferrer" class={classProps} on:click|preventDefault={onclick} {title}>
-  <slot />
-</a>
+{#if onclick == null}
+  <a {href} target="_blank" rel="noopener noreferrer" class={classProps} {title}>
+    <slot />
+  </a>
+{:else}
+  <a {href} target="_blank" rel="noopener noreferrer" class={classProps} on:click|preventDefault={onclick}>
+    <slot />
+  </a>
+{/if}
