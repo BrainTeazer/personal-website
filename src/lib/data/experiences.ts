@@ -8,6 +8,13 @@ export type experienceProp = {
 
 export default [
   {
+    title: "Werkstudent Software Engineering",
+    organization: { name: "Bertrandt Technology (formerly Philotech)", href: "https://www.philotech.net/" },
+    date: [new Date(2023, 7)],
+    description: [],
+    keywords: ["Software Engineering", "STM32", "C", "Embedded Systems", "Aerospace", "Documentation", "Documentation Analysis"],
+  },
+  {
     title: `Teaching Assistant - Numerical Methods`,
     organization: { name: "Constructor University Bremen", href: "https://constructor.university/" },
     date: [new Date(2023, 1), new Date(2023, 5)],

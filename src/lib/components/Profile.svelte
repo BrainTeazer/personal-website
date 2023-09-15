@@ -64,5 +64,5 @@
     <ContactItem href={props.links.mail} icon={MailIcon} classProps={"hover:text-green-500"} />
     <ContactItem href={props.links.number} icon={PhoneIcon} classProps={"hover:text-gray-500"} />
   </div>
-  <Button text={props.buttonText} href={props.resumeSrc} classProp={"transition-all duration-300"} />
+  <!-- <Button text={props.buttonText} href={props.resumeSrc} classProp={"transition-all duration-300"} /> -->
 </div>
