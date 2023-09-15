@@ -7,14 +7,18 @@
   import Link from "./Link.svelte";
 
   export let props: experienceProp;
-  export let classProps: string;
+  export let classProps: string = "";
 </script>
 
 <Card title={props.title} classProp="h-auto sm:h-96 p-8 max-w-xs sm:max-w-experience {classProps}">
   <div class="flex flex-col sm:flex-row gap-2 justify-between w-full">
     <div class="flex gap-2 order-1 font-ibm-plex-serif justify-center sm:order-none sm:justify-start">
       <CalendarIcon />
-      {formatDate(props.date[0])} - {formatDate(props.date[1])}
+      {#if props.date.length == 2}
+        {formatDate(props.date[0])} - {formatDate(props.date[1])}
+      {:else if props.date.length == 1}
+        {formatDate(props.date[0])} - Present
+      {/if}
     </div>
     <Link href={props.organization.href} classProps="font-ibm-plex-serif text-zinc-500 hover:text-zinc-700">
       {props.organization.name}
