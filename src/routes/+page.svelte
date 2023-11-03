@@ -15,6 +15,7 @@
   import { afterUpdate } from "svelte";
   import Sidebar from "$lib/components/Sidebar.svelte";
   import type { PageData } from "./$types";
+  import Navbar from "$lib/components/Navbar.svelte";
 
   let y: any;
 
@@ -54,8 +55,10 @@
 {#await data.streamed.ready}
   <div class="font-ibm-plex-serif">Loading...</div>
 {:then value}
-  <div class="flex flex-col items-center gap-16 {$theme.background} {$theme.onBackground} pb-8 pt-16 sm:pt-32">
-    <!-- {#if darkMode}
+  <div class="flex flex-col items-center">
+    <Navbar />
+    <div class="flex flex-col items-center gap-16 {$theme.background} {$theme.onBackground} pb-8 pt-16 sm:pt-32">
+      <!-- {#if darkMode}
     <div on:click={darkModeToggle}>
       <SunIcon class="float-right right-0 m-8" />
     </div>
@@ -64,10 +67,12 @@
       <MoonIcon class="float-right right-0 m-8" />
     </div>
   {/if} -->
-    <Profile props={profile} id={id.profile} bind:el={profileContainer} />
-    <Skills id={id.skills} imgHeight={100} imgWidth={100} {skills} bind:el={skillsContainer} />
-    <Projects id={id.projects} imgHeight={100} imgWidth={100} {projects} bind:el={projectsContainer} />
-    <Experiences id={id.experiences} {experiences} bind:el={experiencesContainer} />
+
+      <Profile props={profile} id={id.profile} bind:el={profileContainer} />
+      <Skills id={id.skills} imgHeight={100} imgWidth={100} {skills} bind:el={skillsContainer} />
+      <Projects id={id.projects} imgHeight={100} imgWidth={100} {projects} bind:el={projectsContainer} />
+      <Experiences id={id.experiences} {experiences} bind:el={experiencesContainer} />
+    </div>
   </div>
   <Sidebar {...id} />
 {:catch error}

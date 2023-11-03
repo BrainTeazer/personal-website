@@ -12,6 +12,7 @@
   let visible: boolean;
   $: showDescriptionIcon = visible ? ChevronUpIcon : ChevronDownIcon;
 
+  // hide personal description if screen is too small
   onMount(() => {
     let media = window.matchMedia("(max-width: 639px)");
     visible = toggle(media.matches);
