@@ -7,8 +7,8 @@
 <div class="flex flex-col items-center">
   <Navbar />
   {#each data.posts as post}
-    <div>
+    <a href="/blog/{post.slug}">
       {post.title}
-    </div>
+    </a>
   {/each}
 </div>
