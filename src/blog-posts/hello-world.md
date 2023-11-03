@@ -5,6 +5,12 @@ date: "2023-11-03"
 published: true
 ---
 
-## Markdown
+# Markdown
 
-Hey there!
+Hey friends! 👋
+
+```ts
+function greet(name: string) {
+  console.log(`Hey ${name}! 👋`);
+}
+```

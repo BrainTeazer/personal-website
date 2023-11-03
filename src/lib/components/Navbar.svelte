@@ -8,7 +8,7 @@
 
 <div class="flex justify-center items-center self-end">
   <div class="flex m-4 {$theme.background} gap-4 {$theme.onBackground}">
-    <NavbarItem href="./" name={"Home"} {classProps} />
-    <NavbarItem href="./blog" name={"Blog"} {classProps} />
+    <NavbarItem href="/" name={"Home"} {classProps} />
+    <NavbarItem href="/blog" name={"Blog"} {classProps} />
   </div>
 </div>

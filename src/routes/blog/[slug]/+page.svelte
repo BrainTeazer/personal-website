@@ -8,6 +8,8 @@
 
 <div class="flex flex-col items-center">
   <Navbar />
-  <BlogTitle title={data.title} />
-  <div>{@html data.content}</div>
+  <BlogTitle title={data.meta.title} />
+  <div>
+    <svelte:component this={data.content} />
+  </div>
 </div>
