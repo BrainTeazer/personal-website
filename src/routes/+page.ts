@@ -1,5 +1,8 @@
-import { redirect } from "@sveltejs/kit";
-
-export function load() {
-  throw redirect(308, "/home");
-}
+/** @type {import('./$types').PageLoad} */
+export const load: PageLoad = () => {
+  return {
+    streamed: {
+      ready: Promise.resolve(true),
+    },
+  };
+};
