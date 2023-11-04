@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { skillProps } from "$lib/data/skills";
-  import Card from "./Card.svelte";
-  import Section from "./Section.svelte";
+  import Card from "$lib/components/Card.svelte";
+  import Section from "$lib/components/Section.svelte";
 
   export let id: string;
   export let skills: readonly skillProps[];

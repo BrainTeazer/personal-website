@@ -1,9 +1,9 @@
 <script lang="ts">
   import type { projectProps } from "$lib/data/projects";
   import { theme } from "$lib/../stores";
-  import Card from "./Card.svelte";
-  import Tag from "./Tag.svelte";
-  import Link from "./Link.svelte";
+  import Card from "../Card.svelte";
+  import Tag from "../Tag.svelte";
+  import Link from "../Link.svelte";
 
   export let props: projectProps;
 

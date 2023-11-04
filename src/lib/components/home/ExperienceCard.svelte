@@ -1,10 +1,10 @@
 <script lang="ts">
   import { CalendarIcon } from "svelte-feather-icons";
   import type { experienceProp } from "$lib/data/experiences";
-  import Card from "./Card.svelte";
-  import Tag from "./Tag.svelte";
+  import Card from "$lib/components/Card.svelte";
+  import Tag from "$lib/components/Tag.svelte";
   import { formatDate } from "$lib/functions/formatDate";
-  import Link from "./Link.svelte";
+  import Link from "$lib/components/Link.svelte";
 
   export let props: experienceProp;
   export let classProps: string = "";

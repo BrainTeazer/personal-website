@@ -2,7 +2,7 @@
   import { HomeIcon, CodeIcon, InfoIcon, BriefcaseIcon, BookIcon } from "svelte-feather-icons";
   import { theme } from "$lib/../stores";
   import { darkTheme } from "$lib/theme/darkTheme";
-  import SidebarItem from "./SidebarItem.svelte";
+  import SidebarItem from "$lib/components/home/SidebarItem.svelte";
   export let profile: string;
   export let skills: string;
   export let projects: string;
