@@ -2,7 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: "svelte-ts"
+    branches:
+      - svelte-ts
 
 jobs:
   build_site:
