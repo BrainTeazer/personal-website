@@ -1,4 +1,5 @@
-/** @type {import('./$types').PageLoad} */
+import type { PageLoad } from "./$types";
+
 export const load: PageLoad = () => {
   return {
     streamed: {
