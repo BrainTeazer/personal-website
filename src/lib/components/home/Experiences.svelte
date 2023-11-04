@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { experienceProp } from "$lib/data/experiences";
-  import ExperienceCard from "./ExperienceCard.svelte";
-  import Section from "./Section.svelte";
+  import ExperienceCard from "$lib/components/home/ExperienceCard.svelte";
+  import Section from "$lib/components/Section.svelte";
   export let id: string;
   export let experiences: readonly experienceProp[];
   export let el: any;

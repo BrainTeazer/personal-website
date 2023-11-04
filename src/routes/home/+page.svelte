@@ -6,15 +6,15 @@
   import projects from "$lib/data/projects";
   import experiences from "$lib/data/experiences";
   import id from "$lib/data/id";
-  import Skills from "$lib/components/Skills.svelte";
-  import Projects from "$lib/components/Projects.svelte";
+  import Skills from "$lib/components/home/Skills.svelte";
+  import Projects from "$lib/components/home/Projects.svelte";
   import { MoonIcon, SunIcon } from "svelte-feather-icons";
   import { darkTheme } from "$lib/theme/darkTheme";
   import { lightTheme } from "$lib/theme/lightTheme";
   import { theme } from "$lib/../stores";
-  import Experiences from "$lib/components/Experiences.svelte";
+  import Experiences from "$lib/components/home/Experiences.svelte";
   import { afterUpdate } from "svelte";
-  import Sidebar from "$lib/components/Sidebar.svelte";
+  import Sidebar from "$lib/components/home/Sidebar.svelte";
   import type { PageData } from "./$types";
   import Navbar from "$lib/components/Navbar.svelte";
 

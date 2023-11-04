@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { projectProps } from "$lib/data/projects";
   import ProjectCard from "./ProjectCard.svelte";
-  import Section from "./Section.svelte";
+  import Section from "../Section.svelte";
 
   export let id: string;
   export let projects: readonly projectProps[];

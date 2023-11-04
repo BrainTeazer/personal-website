@@ -1,7 +1,7 @@
 <script lang="ts">
   import { capitalizeFirstLetter } from "$lib/functions/capitalizeFirstLetter";
   import { scrollIntoView } from "$lib/functions/scrollIntoView";
-  import Link from "./Link.svelte";
+  import Link from "$lib/components/Link.svelte";
 
   export let href: string;
   export let scrollIntoViewHandler = scrollIntoView;
