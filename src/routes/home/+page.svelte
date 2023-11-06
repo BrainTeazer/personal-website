@@ -2,7 +2,6 @@
   import Profile from "$lib/components/Profile.svelte";
   import profile from "$lib/data/profile";
   import skills from "$lib/data/skills";
-  import navbarItemProp from "$lib/data/navbarItemProp";
   import projects from "$lib/data/projects";
   import experiences from "$lib/data/experiences";
   import id from "$lib/data/id";
@@ -16,8 +15,6 @@
   import { afterUpdate } from "svelte";
   import Sidebar from "$lib/components/home/Sidebar.svelte";
   import type { PageData } from "./$types";
-  import Navbar from "$lib/components/Navbar.svelte";
-
   let y: any;
 
   let darkMode: boolean = $theme == darkTheme ? true : false;
@@ -57,7 +54,6 @@
   <div class="font-ibm-plex-serif">Loading...</div>
 {:then value}
   <div class="flex flex-col items-center">
-    <Navbar navbarItems={navbarItemProp} />
     <div class="flex flex-col items-center gap-16 {$theme.background} {$theme.onBackground} pb-8 pt-16 sm:pt-32">
       <!-- {#if darkMode}
     <div on:click={darkModeToggle}>
