@@ -9,7 +9,7 @@
   import { swipeColor } from "$lib/functions/swipeColor";
   import { toggle } from "$lib/functions/toggle";
 
-  let visible: boolean;
+  let visible: boolean = false;
   $: showDescriptionIcon = visible ? ChevronUpIcon : ChevronDownIcon;
 
   // hide personal description if screen is too small
