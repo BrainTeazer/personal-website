@@ -12,7 +12,7 @@
 <div class="flex justify-center items-center self-start {$theme.background} m-4 shadow-card border-2 {$theme.border} {$theme.onBackground}">
   <div class="flex {$theme.background} {$theme.onBackground}">
     {#each navbarItems as navbarItem}
-      <NavbarItem href="/{navbarItem.name}" name={navbarItem.name} {classProps} />
+      <NavbarItem href="/{navbarItem.href}" name={navbarItem.name} {classProps} />
     {/each}
   </div>
 </div>

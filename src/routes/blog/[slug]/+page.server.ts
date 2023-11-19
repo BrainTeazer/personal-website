@@ -1,15 +1,12 @@
 import { error } from "@sveltejs/kit";
 
-export const prerender = false;
+export const prerender = true;
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
   try {
-    const post = await import(`./../../../blog-posts/${params.slug}.md`);
-
     return {
-      content: post.default,
-      meta: post.metadata,
+      content: `${params.slug}`,
     };
   } catch (e) {
     throw error(404, `Could not find ${params.slug}`);
