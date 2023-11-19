@@ -3,6 +3,5 @@ export type Post = {
   slug: string;
   description: string;
   date: string;
-  keywords: string[];
   published: boolean;
 };
