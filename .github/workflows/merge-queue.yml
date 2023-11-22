@@ -2,7 +2,22 @@ name: Validate code in the merge queue
 
 on:
   merge_group:
+    paths:
+      - "src/**"
+      - "static/**"
+      - "svelte.config.js"
+      - "tailwind.config.js"
+      - "vite.config.ts"
+      - ".github/workflows/**"
+
   pull_request:
+    paths:
+      - "src/**"
+      - "static/**"
+      - "svelte.config.js"
+      - "tailwind.config.js"
+      - "vite.config.ts"
+      - ".github/workflows/**"
 
 jobs:
   validate-pr:
