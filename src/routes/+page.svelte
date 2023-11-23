@@ -15,7 +15,9 @@
 {#await data.streamed.ready}
   <div class="m-4">Loading...</div>
 {:then value}
-  <div class="flex flex-col items-center gap-16 {$theme.background} {$theme.onBackground} pb-8 pt-16">
+  <div
+    class="flex flex-col items-center gap-16 {$theme.background} {$theme.onBackground} pb-8 pt-16"
+  >
     <Profile id={id.profile} />
     <Skills id={id.skills} />
     <Projects id={id.projects} />

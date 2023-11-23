@@ -1,45 +1,38 @@
-// export type Theme = {
-//   primary: string;
-//   primaryVariant: string;
-//   secondary: string;
-//   background: string;
-//   surface: string;
-//   error: string;
-//   onPrimary: string;
-//   onSecondary: string;
-//   onBackground: string;
-//   onSurface: string;
-//   onError: string;
-//   highEmphasis: string;
-//   mediumEmphasis: string;
-// };
-
 export type Theme = {
-  background: string;
-  onBackground: string;
-  onBackgroundVariant: string;
+  primary: string;
   secondary: string;
+  background: string;
+  surface: string;
+  error: string;
+  onPrimary: string;
   onSecondary: string;
-  boxShadow: string;
-  border: string;
+  onBackground: string;
+  onSurface: string;
+  onError: string;
 };
 
 export const lightTheme: Theme = {
-  background: "bg-[#f1f5f9]",
-  onBackgroundVariant: "text-zinc-500",
-  onBackground: "text-black",
-  secondary: "bg-rose-500",
-  onSecondary: "text-black",
-  boxShadow: "shadow-card-light",
-  border: "border-black",
+  primary: "#e0e4e9",
+  secondary: "#f4a384",
+  background: "#f1f5f9",
+  surface: "#f1f5f8",
+  error: "#b00020",
+  onPrimary: "#77797b",
+  onSecondary: "#000000",
+  onBackground: "#000000",
+  onSurface: "#000000",
+  onError: "#000000",
 } as const;
 
 export const darkTheme: Theme = {
-  background: "bg-[#0e0a06]",
-  onBackground: "text-[#ffffff]",
-  onBackgroundVariant: "text-[#eeeeee]",
-  secondary: "bg-[#0e0a06]",
-  onSecondary: "text-[#0e0a06]",
-  boxShadow: "shadow-card-dark",
-  border: "border-white",
+  primary: "#e0e4e9",
+  secondary: "#404754",
+  background: "#212737",
+  surface: "#212737",
+  error: "#b00020",
+  onPrimary: "#ffffff",
+  onSecondary: "#ffffff",
+  onBackground: "#eaedf3",
+  onSurface: "#ffffff",
+  onError: "#ffffff",
 } as const;
