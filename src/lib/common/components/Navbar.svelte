@@ -6,8 +6,8 @@
   export let navbarItems: NavbarItemProp[];
 </script>
 
-<div class="flex justify-center items-center self-start m-4 {$theme.background} shadow-card border-2 {$theme.border} {$theme.onBackground}">
+<div class="flex m-4 w-full {$theme.background} {$theme.onBackground} last:border-r border-black">
   {#each navbarItems as navbarItem}
-    <NavbarItem href="/{navbarItem.href}" classProps={"flex gap-1 hover:bg-red-300 p-2 capitalize"} name={navbarItem.name} />
+    <NavbarItem href="/{navbarItem.href}" classProps={"hover:text-red-500 text-xl font-semibold m-2 capitalize"} name={navbarItem.name} />
   {/each}
 </div>

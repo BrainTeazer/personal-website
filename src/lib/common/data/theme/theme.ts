@@ -20,7 +20,6 @@ export type Theme = {
   onBackgroundVariant: string;
   secondary: string;
   onSecondary: string;
-  hover: string;
   boxShadow: string;
   border: string;
 };
@@ -33,16 +32,14 @@ export const lightTheme: Theme = {
   onSecondary: "text-black",
   boxShadow: "shadow-card-light",
   border: "border-black",
-  hover: "bg-hover-dark",
 } as const;
 
 export const darkTheme: Theme = {
   background: "bg-[#0e0a06]",
   onBackground: "text-[#ffffff]",
   onBackgroundVariant: "text-[#eeeeee]",
-  secondary: "bg-secondary-dark",
-  onSecondary: "text-onSecondary-dark",
+  secondary: "bg-[#0e0a06]",
+  onSecondary: "text-[#0e0a06]",
   boxShadow: "shadow-card-dark",
   border: "border-white",
-  hover: "bg-hover-dark",
 } as const;
