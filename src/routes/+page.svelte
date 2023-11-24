@@ -40,7 +40,9 @@
 
 <svelte:window bind:scrollY={y} />
 
-{#await data.streamed.ready then ready}
+{#await data.streamed.ready}
+  <div class="m-4">Loading...</div>
+{:then value}
   <div class="flex flex-col items-center gap-16 {$theme.background} {$theme.onBackground} pb-8 pt-16 sm:pt-32">
     <Profile props={profile} id={id.profile} bind:el={profileContainer} />
     <Skills id={id.skills} imgHeight={100} imgWidth={100} {skills} bind:el={skillsContainer} />
