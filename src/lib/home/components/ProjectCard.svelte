@@ -13,10 +13,15 @@
   export let imgHeight: number;
 </script>
 
-<Card title={props.title} imgSrc={props.imgSrc} {imgHeight} {imgWidth} classProp="h-96 p-8 max-w-xs sm:h-auto lg:h-96 md:max-w-xl {classProps}" imgProp={"mt-8"}>
+<Card title={props.title} imgSrc={props.imgSrc} {imgHeight} {imgWidth} classProp="min-h-[24em] h-min p-8 max-w-xs md:max-w-xl {classProps}" imgProp={"mt-8"}>
+  <!-- Project Description -->
   <div class="font-ibm-plex-serif {$theme.onSecondary} text-center">{props.description}</div>
-  <Link href={props.source} classProps="hover:underline text-stone-400 hover:decoration-indigo-500 hover:text-blue-700 mt-5 transition-all duration-300 ease-linear">Source</Link>
-  <div class="flex gap-4 mt-4 lg:mt-auto flex-wrap justify-center">
+
+  <!-- Link to source of project -->
+  <Link href={props.source} classProps="hover:underline text-stone-400 hover:decoration-indigo-500 hover:text-blue-700 mt-5">Source</Link>
+
+  <!-- Tags / Keywords of project -->
+  <div class="flex gap-4 mt-4 lg:mt-auto flex-wrap justify-center last:pb-8">
     {#each props.languages as language}
       <Tag tag={language} />
     {/each}

@@ -12,9 +12,9 @@
 </script>
 
 <Section title={"Projects"} {id} bind:el>
-  <div class="gap-4 mt-8 grid auto-rows-project grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+  <div class="gap-4 mt-8 w-screen flex flex-wrap justify-center items-center">
     {#each projects as project}
-      <ProjectCard props={project} {imgHeight} {imgWidth} classProps={"col-span-1 md:col-span-2 xl:last:col-end-4"} />
+      <ProjectCard props={project} {imgHeight} {imgWidth} classProps={"flex-1 h-8 basis-1/2"} />
     {/each}
   </div>
 </Section>

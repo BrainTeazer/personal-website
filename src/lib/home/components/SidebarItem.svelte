@@ -1,6 +1,5 @@
 <script lang="ts">
   import { scrollIntoView } from "$lib/home/functions/scrollIntoView";
-  import Link from "$lib/common/components/Link.svelte";
 
   export let href: string;
   export let scrollIntoViewHandler = scrollIntoView;
@@ -10,6 +9,6 @@
   export let name: string;
 </script>
 
-<Link {href} onclick={scrollIntoViewHandler} {classProps} title={name}>
+<a {href} rel="noopener noreferrer" target="_blank" on:click={scrollIntoViewHandler} class={classProps} title={name}>
   <svelte:component this={icon} />
-</Link>
+</a>

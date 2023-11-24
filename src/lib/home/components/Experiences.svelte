@@ -8,9 +8,9 @@
 </script>
 
 <Section title="Experiences" {id} bind:el>
-  <div class="grid auto-rows-project grid-cols-1 xl:grid-cols-4 gap-4 mt-8">
+  <div class="flex flex-wrap w-full justify-center gap-4 mt-8">
     {#each experiences as experience}
-      <ExperienceCard props={experience} classProps={"xl:col-span-2"} />
+      <ExperienceCard props={experience} classProps={"flex-1 basis-1/2"} />
     {/each}
   </div>
 </Section>

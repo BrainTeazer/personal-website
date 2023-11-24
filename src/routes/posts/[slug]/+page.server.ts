@@ -5,6 +5,7 @@ export const prerender = true;
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
   try {
+    // return the slug
     return {
       content: `${params.slug}`,
     };
