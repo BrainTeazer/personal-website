@@ -1,14 +1,19 @@
+import { Github, Linkedin, Mail, Phone } from "lucide-svelte";
+
 export type profileProp = {
   imgSrc: string;
   name: string;
   prelim: string;
   description: string;
-  buttonText: string;
-  resumeSrc: string;
-  links: any;
+  contactItems: contactItemProp[];
 };
 
-const date = new Date();
+export type contactItemProp = {
+  name: string;
+  link: string;
+  icon: ConstructorOfATypedSvelteComponent;
+  hoverColor: string;
+};
 
 export default {
   imgSrc: "./profile.jpeg",
@@ -20,12 +25,30 @@ export default {
     I enjoy learning/trying out new things, whether cutting-edge or just something I want to try.
     I love music, playing sports, and the command line.
   `,
-  buttonText: "Resume",
-  resumeSrc: `./documents/Ayam_Banjade_Resume_${date.getFullYear()}_${date.toLocaleString("default", { month: "long" })}.pdf`,
-  links: {
-    linkedin: "https://www.linkedin.com/in/ayambanjade",
-    github: "https://github.com/BrainTeazer",
-    mail: "mailto:ayam.banjade@gmail.com",
-    number: "tel:+4915752730515",
-  },
+  contactItems: [
+    {
+      name: "linkedin",
+      link: "https://www.linkedin.com/in/ayambanjade",
+      icon: Linkedin,
+      hoverColor: "hover:text-blue-500",
+    },
+    {
+      name: "github",
+      link: "https://github.com/BrainTeazer",
+      icon: Github,
+      hoverColor: "hover:text-slate-500",
+    },
+    {
+      name: "mail",
+      link: "mailto:ayam.banjade@gmail.com",
+      icon: Mail,
+      hoverColor: "hover:text-green-500",
+    },
+    {
+      name: "phone",
+      link: "tel:+4915752730515",
+      icon: Phone,
+      hoverColor: "hover:text-gray-500",
+    },
+  ],
 } as const;

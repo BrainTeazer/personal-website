@@ -27,6 +27,7 @@ body {
 
 .active {
   @apply text-rose-500;
+  @apply font-bold;
 }
 
 ::selection {

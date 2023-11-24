@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { CalendarIcon } from "svelte-feather-icons";
+  import { Calendar } from "lucide-svelte";
   import type { experienceProp } from "$lib/home/data/experiences";
   import Card from "$lib/common/components/Card.svelte";
   import Tag from "$lib/common/components/Tag.svelte";
@@ -10,22 +10,22 @@
   export let classProps: string = "";
 </script>
 
-<Card title={props.title} classProp="h-auto sm:h-96 p-8 max-w-xs sm:max-w-experience {classProps}">
+<Card title={props.title} classProp="h-auto sm:h-96 p-8 max-w-xs sm:max-w-[37em] font-ibm-plex-serif {classProps}">
   <div class="flex flex-col sm:flex-row gap-2 justify-between w-full">
     <!-- Work Duration -->
-    <div class="flex gap-2 order-1 font-ibm-plex-serif justify-center sm:order-none sm:justify-start">
-      <CalendarIcon />
+    <div class="flex gap-2 order-1 justify-center sm:order-none sm:justify-start">
+      <Calendar />
       {formatDate(props.date[0])} - {props.date.length == 2 ? formatDate(props.date[1]) : "Present"}
     </div>
 
     <!-- Company Name and Link -->
-    <Link href={props.organization.href} classProps="font-ibm-plex-serif text-zinc-500 hover:text-zinc-700">
+    <Link href={props.organization.href} classProps="text-zinc-500 hover:underline hover:decoration-indigo-500 hover:text-blue-700">
       {props.organization.name}
     </Link>
   </div>
 
   <!-- Job Description -->
-  <ul class="list-disc list-inside self-start p-4 font-ibm-plex-serif text-center">
+  <ul class="list-disc list-inside self-start p-4 text-center">
     {#each props.description as description}
       <li class="mt-4">{description}</li>
     {/each}
