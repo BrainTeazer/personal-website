@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedinIcon, MailIcon, PhoneIcon } from "svelte-feather-icons";
+import { Github, Linkedin, Mail, Phone } from "lucide-svelte";
 
 export type profileProp = {
   imgSrc: string;
@@ -29,25 +29,25 @@ export default {
     {
       name: "linkedin",
       link: "https://www.linkedin.com/in/ayambanjade",
-      icon: LinkedinIcon,
+      icon: Linkedin,
       hoverColor: "hover:text-blue-500",
     },
     {
       name: "github",
       link: "https://github.com/BrainTeazer",
-      icon: GithubIcon,
+      icon: Github,
       hoverColor: "hover:text-slate-500",
     },
     {
       name: "mail",
       link: "mailto:ayam.banjade@gmail.com",
-      icon: MailIcon,
+      icon: Mail,
       hoverColor: "hover:text-green-500",
     },
     {
       name: "phone",
       link: "tel:+4915752730515",
-      icon: PhoneIcon,
+      icon: Phone,
       hoverColor: "hover:text-gray-500",
     },
   ],

@@ -10,7 +10,7 @@
   {#each navbarItems as navbarItem}
     <a
       href="/{navbarItem.href}"
-      class="decoration-black underline-offset-4 decoration-4 hover:text-red-500 text-xl font-semibold m-2 capitalize"
+      class="decoration-black underline-offset-4 decoration-2 hover:text-red-500 text-xl font-semibold m-2 capitalize"
       class:underline={$page.url.pathname == `/${navbarItem.href}`}
       rel="noopener noreferrer"
       title={navbarItem.name}

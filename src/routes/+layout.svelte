@@ -4,7 +4,7 @@
   import navbarItemProp from "$lib/common/data/navbarItemProp";
   import { darkTheme, lightTheme } from "$lib/common/data/theme/theme";
   import { theme } from "$lib/../stores";
-  import { MoonIcon, SunIcon } from "svelte-feather-icons";
+  import { Moon, Sun } from "lucide-svelte";
 
   const darkModeToggle = () => {
     theme.set($theme == lightTheme ? darkTheme : lightTheme);
@@ -15,7 +15,7 @@
   <Navbar navbarItems={navbarItemProp} />
 
   <!-- <button on:click|preventDefault={darkModeToggle}>
-    <svelte:component this={$theme == lightTheme ? MoonIcon : SunIcon} />
+    <svelte:component this={$theme == lightTheme ? Moon : Sun} />
   </button> -->
 </div>
 <slot />

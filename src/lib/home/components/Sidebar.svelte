@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { HomeIcon, CodeIcon, InfoIcon, BriefcaseIcon, BookIcon } from "svelte-feather-icons";
+  import { Home, Code, Briefcase, Book } from "lucide-svelte";
   import { theme } from "$lib/../stores";
   import SidebarItem from "$lib/home/components/SidebarItem.svelte";
   export let profile: string;
@@ -13,8 +13,8 @@
 <div
   class="flex m-4 fixed bottom-0 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:flex-col md:left-0 lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 lg:flex-col lg:left-0 {$theme.background} gap-4 shadow-card border-2 {$theme.border} {$theme.onBackground} p-2"
 >
-  <SidebarItem href="#{profile}" name={profile} {classProps} icon={HomeIcon} />
-  <SidebarItem href="#{skills}" name={skills} {classProps} icon={BookIcon} />
-  <SidebarItem href="#{projects}" name={projects} {classProps} icon={CodeIcon} />
-  <SidebarItem href="#{experiences}" name={experiences} {classProps} icon={BriefcaseIcon} />
+  <SidebarItem href="#{profile}" name={profile} {classProps} icon={Home} />
+  <SidebarItem href="#{skills}" name={skills} {classProps} icon={Book} />
+  <SidebarItem href="#{projects}" name={projects} {classProps} icon={Code} />
+  <SidebarItem href="#{experiences}" name={experiences} {classProps} icon={Briefcase} />
 </div>

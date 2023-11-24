@@ -2,7 +2,7 @@
   import type { profileProp } from "$lib/home/data/profile";
   import { onMount } from "svelte";
   import { theme } from "$lib/../stores";
-  import { ChevronDownIcon, ChevronUpIcon } from "svelte-feather-icons";
+  import { ChevronDown, ChevronUp } from "lucide-svelte";
   import ContactItem from "$lib/home/components/ContactItem.svelte";
   import { slide } from "svelte/transition";
   import { swipeColor } from "$lib/home/functions/swipeColor";
@@ -64,7 +64,7 @@
         visible = !visible;
       }}
     >
-      <svelte:component this={visible ? ChevronUpIcon : ChevronDownIcon} class="mb-4 sm:hidden" />
+      <svelte:component this={visible ? ChevronUp : ChevronDown} class="mb-4 sm:hidden" />
     </button>
   </div>
 </div>
