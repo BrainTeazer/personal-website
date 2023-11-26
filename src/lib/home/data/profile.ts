@@ -19,12 +19,6 @@ export default {
   imgSrc: "./profile.jpeg",
   name: "Ayam Banjade",
   prelim: "Programmer | Student | Neophile",
-  description: `
-    I am an undergrad CS student
-    and an open-source enthusiast.
-    I enjoy learning/trying out new things, whether cutting-edge or just something I want to try.
-    I love music, playing sports, and the command line.
-  `,
   contactItems: [
     {
       name: "linkedin",
