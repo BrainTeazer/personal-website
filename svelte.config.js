@@ -24,9 +24,9 @@ const config = {
       assets: "build",
       fallback: "index.html",
     }),
-    // paths: {
-    //   relative: false,
-    // },
+    paths: {
+      relative: false,
+    },
   },
 };
 
