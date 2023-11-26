@@ -10,7 +10,9 @@
   };
 </script>
 
-<Navbar class="sticky top-0 bg-transparent" />
+<div>
+  <Navbar class="sticky top-0 bg-transparent" />
+</div>
 
 <!-- <button on:click|preventDefault={darkModeToggle}>
     <svelte:component this={$theme == lightTheme ? Moon : Sun} />
