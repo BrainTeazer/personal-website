@@ -1,19 +1,7 @@
 <script lang="ts">
-  import { theme } from "$lib/../stores";
-
-  export let title: string;
-  export let imgSrc: string = "";
-  export let imgWidth = 40;
-  export let imgHeight = 40;
-  export let classProp: string = "";
-  export let imgProp: string = "";
-  export let imgAlt: string = "";
+  import { theme } from "../../../stores";
 </script>
 
-<div class="hover:scale-105 flex flex-col justify-center items-center {$theme.background} p-0.5 {$theme.boxShadow} border-2 {$theme.border} {classProp}">
-  {#if imgSrc}
-    <img src={imgSrc} alt={imgAlt} class={imgProp} style="width:{imgWidth}px;height:{imgHeight}px" />
-  {/if}
-  <div class="font-medium text-2xl text-center">{title}</div>
+<div class="hover:scale-105 rounded-xl {$theme.background} p-4 {$theme.boxShadow} border-2 {$theme.border} {$$props.class}">
   <slot />
 </div>

@@ -11,11 +11,10 @@
   };
 </script>
 
-<div class="flex flex-row items-center {$theme.background} {$theme.onBackground}">
-  <Navbar navbarItems={navbarItemProp} />
+<Navbar navbarItems={navbarItemProp} class="sticky top-0 bg-transparent" />
 
-  <!-- <button on:click|preventDefault={darkModeToggle}>
+<!-- <button on:click|preventDefault={darkModeToggle}>
     <svelte:component this={$theme == lightTheme ? Moon : Sun} />
   </button> -->
-</div>
+
 <slot />

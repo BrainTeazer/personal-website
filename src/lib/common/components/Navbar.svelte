@@ -6,7 +6,7 @@
   export let navbarItems: NavbarItemProp[];
 </script>
 
-<div class="flex m-4 {$theme.background} {$theme.onBackground}">
+<div class="flex m-4 {$theme.background} {$theme.onBackground} {$$props.class}">
   {#each navbarItems as navbarItem}
     <a
       href="/{navbarItem.href}"
