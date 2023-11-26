@@ -27,11 +27,6 @@ jobs:
         run: |
           npm run build
 
-      - name: Minify Action
-        uses: anthonyftwang/minify-action@v1.0.1
-        with:
-          path: "build/"
-
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v2
         with:
