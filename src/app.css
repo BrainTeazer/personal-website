@@ -19,15 +19,15 @@ html {
 body {
   /* height: 100vh; */
   padding: 0;
-  overflow: auto;
+
+  /* overflow: auto;
   overflow-x: hidden;
-  overscroll-behavior: none;
+  overscroll-behavior: none; */
   background-color: rgb(241 245 249);
 }
 
 .active {
   @apply text-rose-500;
-  @apply font-bold;
 }
 
 ::selection {
