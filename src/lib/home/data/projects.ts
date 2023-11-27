@@ -14,7 +14,8 @@ export default [
   },
   {
     title: "Bug World",
-    description: "Client-side bug simulation game (GUI, assembler, parser, simulator)",
+    description:
+      "Client-side bug simulation game (GUI, assembler, parser, simulator)",
     toolset: ["Javascript", "HTML", "CSS", "Jest"],
     source: "https://github.com/BrainTeazer/bug-world",
   },
@@ -26,7 +27,8 @@ export default [
   },
   {
     title: "Spam Email Extractor",
-    description: "Extracts 57 email attributes based on UCI's Spambase Data Set",
+    description:
+      "Extracts 57 email attributes based on UCI's Spambase Data Set",
     toolset: ["C++"],
     source: "https://github.com/BrainTeazer/spam-email-extractor",
   },
@@ -58,6 +60,6 @@ export default [
     title: "Source Code",
     description: "Source code of personal website hosted on Github Pages",
     toolset: ["Typescript", "Svelte", "Tailwind CSS"],
-    source: "https://github.com/BrainTeazer/personal-website/tree/svelte-ts",
+    source: "https://github.com/BrainTeazer/personal-website",
   },
 ] as const;
