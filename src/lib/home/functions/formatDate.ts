@@ -1,4 +1,10 @@
 export const formatDate = (date: Date) => {
-  const isoDate: string = date.toISOString().split("T")[0];
-  return `${isoDate.substring(5, 7)}/${isoDate.substring(0, 4)}`;
+  if (date == null) return "Present";
+
+  // padStart pads string with given string until it matches length provided (in this case 2)
+  const month: string = (date.getMonth() + 1).toString().padStart(2, "0");
+
+  const year: string = date.getFullYear().toString();
+
+  return `${month}/${year}`;
 };

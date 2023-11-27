@@ -5,7 +5,7 @@
   import Experiences from "$lib/home/components/Experiences.svelte";
   import Sidebar from "$lib/home/components/Sidebar.svelte";
 
-  import id from "$lib/home/data/id";
+  import sections from "$lib/home/data/sections";
   import { theme } from "$lib/../stores";
   import type { PageData } from "./$types";
 
@@ -15,14 +15,16 @@
 {#await data.streamed.ready}
   <div class="m-4">Loading...</div>
 {:then value}
-  <div class="flex flex-col items-center gap-16 {$theme.background} {$theme.onBackground} pb-8 pt-16">
-    <Profile id={id.profile} />
-    <Skills id={id.skills} />
-    <Projects id={id.projects} />
-    <Experiences id={id.experiences} />
+  <div
+    class="flex flex-col items-center gap-16 pb-8 pt-16 {$theme.background} {$theme.onBackground}"
+  >
+    <Profile id={sections[0].id} />
+    <Skills id={sections[1].id} />
+    <Projects id={sections[2].id} />
+    <Experiences id={sections[3].id} />
   </div>
 
   <div class="flex justify-center">
-    <Sidebar {...id} />
+    <Sidebar />
   </div>
 {/await}

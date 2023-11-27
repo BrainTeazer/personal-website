@@ -2,9 +2,8 @@
   import { theme } from "$lib/../stores";
 
   export let title: string;
-  export let isUnderlined: boolean = true;
 </script>
 
-<div class="uppercase text-2xl font-bold {$$props.class} {isUnderlined ? 'decoration-2 underline underline-offset-8 decoration-black' : ' '}">
+<div class="text-5xl font-bold {$theme.onBackground} {$$props.class}">
   {title}
 </div>
