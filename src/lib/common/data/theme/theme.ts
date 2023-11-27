@@ -9,30 +9,48 @@ export type Theme = {
   onBackground: string;
   onSurface: string;
   onError: string;
+  hoverOnBackground: string;
+  hoverPrimary: string;
+  hoverOnPrimary: string;
+  hoverSecondary: string;
+  border: string;
+  boxShadow: string;
 };
 
 export const lightTheme: Theme = {
-  primary: "#e0e4e9",
-  secondary: "#f4a384",
-  background: "#f1f5f9",
-  surface: "#f1f5f8",
-  error: "#b00020",
-  onPrimary: "#77797b",
-  onSecondary: "#000000",
-  onBackground: "#000000",
-  onSurface: "#000000",
-  onError: "#000000",
+  primary: "bg-[#d1d5db]",
+  secondary: "bg-[#f4a384]",
+  background: "bg-[#f5f5f7]",
+  surface: "bg-[#fbfbfd]",
+  error: "bg-[#b00020]",
+  onPrimary: "text-[#77797b]",
+  onSecondary: "text-[#000000]",
+  onBackground: "text-[#1d1d1f]",
+  onSurface: "text-[#1d1d1f]",
+  onError: "text-[#000000]",
+  hoverOnBackground: "hover:text-[#000000]",
+  hoverPrimary: "hover:bg-[#000000]",
+  hoverOnPrimary: "hover:text-[#d1d5db]",
+  hoverSecondary: "hover:bg-[]",
+  border: "border-[#333333]",
+  boxShadow: "shadow-card-light",
 } as const;
 
 export const darkTheme: Theme = {
-  primary: "#e0e4e9",
-  secondary: "#404754",
-  background: "#212737",
-  surface: "#212737",
-  error: "#b00020",
-  onPrimary: "#ffffff",
-  onSecondary: "#ffffff",
-  onBackground: "#eaedf3",
-  onSurface: "#ffffff",
-  onError: "#ffffff",
+  primary: "bg-[#e0e4e9]",
+  secondary: "bg-[#404754]",
+  background: "bg-[#212737]",
+  surface: "bg-[#212737]",
+  error: "bg-[#b00020]",
+  onPrimary: "text-[#ffffff]",
+  onSecondary: "text-[#ffffff]",
+  onBackground: "text-[#eaedf3]",
+  onSurface: "text-[#ffffff]",
+  onError: "text-[#ffffff]",
+  hoverOnBackground: "hover:text-[]",
+  hoverPrimary: "hover:bg-[]",
+  hoverOnPrimary: "hover:bg-[#d1d5db]",
+  hoverSecondary: "hover:bg-[]",
+  border: "border-[#ffffff]",
+  boxShadow: "shadow-card-light",
 } as const;

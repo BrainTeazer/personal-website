@@ -13,8 +13,12 @@
   <!-- Default size of each card is 10em and 10em is added as a buffer (e.g, 3 per row would be 30em + 10em = 40em) -->
   <div class="gap-4 mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
     {#each skills as skill}
-      <Card class="p-2 flex flex-col justify-center items-center">
-        <img src={skill.imgSrc} style="width:{imgWidth}px;height:{imgHeight}px" alt={skill.name} />
+      <Card class="p-2 flex flex-col items-center">
+        <img
+          src={skill.imgSrc}
+          style="width:{imgWidth}px;height:{imgHeight}px"
+          alt={skill.name}
+        />
         <div class="font-medium text-4xl">{skill.name}</div>
       </Card>
     {/each}
