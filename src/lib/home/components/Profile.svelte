@@ -5,6 +5,7 @@
   import { slide } from "svelte/transition";
   import profile from "$lib/home/data/profile";
   import Card from "$lib/common/components/Card.svelte";
+  import { fontConfig } from "$lib/common/data/theme/typography";
 
   let visible: boolean = false;
 
@@ -28,7 +29,7 @@
 </script>
 
 <div
-  class="flex flex-col md:flex-row md:gap-8 gap-4 justify-center items-center m-4 p-0.5 {$theme.onBackground}"
+  class="flex flex-col md:flex-row md:gap-8 gap-4 justify-center items-center h-[50vh] p-0.5"
   {id}
 >
   <!-- Name, Prelim, Image and Contact -->
@@ -41,12 +42,12 @@
     />
 
     <!-- Name -->
-    <div class="text-4xl font-bold text-white bg-black p-2 sm:max-w-fit">
+    <div class="text-5xl font-bold">
       {profile.name}
     </div>
 
     <!-- Prelim -->
-    <div class="text-2xl">
+    <div class={fontConfig.subheading}>
       {profile.prelim}
     </div>
 
@@ -57,7 +58,7 @@
           rel="noopener noreferrer"
           target="_blank"
           href={contactItem.link}
-          class={contactItem.hoverColor}
+          class={fontConfig.headingHoverOpacity}
         >
           <svelte:component this={contactItem.icon} />
         </a>
@@ -70,7 +71,10 @@
     class="font-ibm-plex-serif sm:w-4/5 lg:w-[30em] md:w-[30em] text-center md:text-left"
   >
     {#if visible}
-      <Card class="text-2xl mb-2 {$theme.onSecondary}" transition={slide}>
+      <Card
+        class="{fontConfig.large} mb-2 {$theme.onSurface}"
+        transition={slide}
+      >
         <div>
           👋🏽 Hello there :-) . I am an undergrad CS student, and avid
           open-source and privacy enthusiast. I am a <a

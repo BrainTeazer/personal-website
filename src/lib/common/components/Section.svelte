@@ -6,6 +6,7 @@
 </script>
 
 <div class="flex flex-col items-center" {id}>
-  <Title {title} />
+  <Title {title} class="{$theme.onBackground} font-black underline" />
+
   <slot />
 </div>

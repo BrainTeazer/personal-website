@@ -4,18 +4,21 @@
   import { darkTheme, lightTheme } from "$lib/common/data/theme/theme";
   import { theme } from "$lib/../stores";
   import { Moon, Sun } from "lucide-svelte";
+  import { fontConfig } from "$lib/common/data/theme/typography";
 
   const darkModeToggle = () => {
     theme.set($theme == lightTheme ? darkTheme : lightTheme);
   };
 </script>
 
-<div>
-  <Navbar class="sticky top-0 bg-transparent" />
-</div>
-
-<!-- <button on:click|preventDefault={darkModeToggle}>
+<div class="flex {$theme.onBackground}">
+  <Navbar />
+  <!-- <button
+    on:click|preventDefault={darkModeToggle}
+    class={fontConfig.headingHoverOpacity}
+  >
     <svelte:component this={$theme == lightTheme ? Moon : Sun} />
   </button> -->
+</div>
 
 <slot />
