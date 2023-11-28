@@ -7,18 +7,15 @@
   import Card from "$lib/common/components/Card.svelte";
   import { fontConfig } from "$lib/common/data/theme/typography";
 
-  let visible: boolean = false;
-
   const urlClass: string =
     "underline decoration-black decoration-2 hover:underline-offset-4";
 
+  // if it is screen is smaller than 639px, about should not be visible
+  let media = window.matchMedia("(max-width: 639px)");
+  let visible = !media.matches;
+
   // hide personal description if screen is too small
   onMount(() => {
-    let media = window.matchMedia("(max-width: 639px)");
-
-    // if it is screen is smaller than 639px, about should not be visible
-    visible = !media.matches;
-
     media.addEventListener("change", (event) => {
       // if it is screen is smaller than 639px, about should not be visible
       visible = !event.matches;
