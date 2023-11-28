@@ -3,7 +3,7 @@
   import { page } from "$app/stores";
   import { ChevronRight } from "lucide-svelte";
   import navbarItems from "$lib/common/data/navbarItems";
-  import { fontConfig } from "../data/theme/typography";
+  import { fontConfig } from "$lib/common/data/theme/typography";
 
   const postsPath = navbarItems[1].href;
   $: urlPath = $page.url.pathname;
@@ -11,11 +11,11 @@
   $: isPostsPage = urlPath.slice(0, postsPath.length) === postsPath;
   $: isPost = urlPath.length > postsPath.length;
 
-  const navbarItemClass: string = `opacity-80 hover:opacity-100 m-2`;
+  const navbarItemClass: string = `opacity-100 hover:opacity-90 m-2`;
 </script>
 
 <div
-  class="flex m-4 {fontConfig.medium} font-semibold capitalize decoration-[#000000] underline-offset-4 decoration-2 {$$props.class}"
+  class="flex m-4 {fontConfig.medium} font-semibold capitalize underline-offset-4 decoration-2 {$$props.class}"
 >
   <!-- Home -->
   <a

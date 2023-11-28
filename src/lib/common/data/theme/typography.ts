@@ -17,4 +17,4 @@ export const fontConfig: Typography = {
   large: "text-2xl",
   headingHoverOpacity: "hover:opacity-70",
   fontFamilySerif: "font-ibm-plex-serif",
-};
+} as const;

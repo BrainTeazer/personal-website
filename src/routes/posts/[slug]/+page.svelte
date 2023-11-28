@@ -18,7 +18,7 @@
         <Title title={post.metadata.title} />
 
         <!-- Original Publish Date of Blog -->
-        <div class="text-gray-400 mb-4">{post.metadata.date}</div>
+        <div class="text-gray-400 mb-4 mt-2">{post.metadata.date}</div>
 
         <!-- Blog Content -->
 

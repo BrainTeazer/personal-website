@@ -29,7 +29,7 @@
 </script>
 
 <div
-  class="flex flex-col md:flex-row md:gap-8 gap-4 justify-center items-center h-[50vh] p-0.5"
+  class="flex flex-col md:flex-row md:gap-8 gap-4 justify-center items-center m-4 p-0.5"
   {id}
 >
   <!-- Name, Prelim, Image and Contact -->

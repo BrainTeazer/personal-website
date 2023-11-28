@@ -6,7 +6,10 @@
 </script>
 
 <div class="flex flex-col items-center" {id}>
-  <Title {title} class="{$theme.onBackground} font-black underline" />
+  <Title
+    {title}
+    class="{$theme.onBackground} font-black underline decoration-dotted opacity-80"
+  />
 
   <slot />
 </div>
