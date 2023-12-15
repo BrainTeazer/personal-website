@@ -14,7 +14,7 @@
       <Card class="flex flex-col p-2 gap-4">
         <!-- Title -->
         <a
-          aria-label="Project Link"
+          aria-label={project.title}
           href={project.source}
           class="{fontConfig.heading} font-semibold {fontConfig.headingHoverOpacity} max-w-fit"
         >
