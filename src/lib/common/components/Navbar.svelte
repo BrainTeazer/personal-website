@@ -19,6 +19,7 @@
 >
   <!-- Home -->
   <a
+    aria-label="Link to Home Page"
     href={navbarItems[0].href}
     class={navbarItemClass}
     class:underline={urlPath == `${navbarItems[0].href}`}
@@ -30,6 +31,7 @@
   <!-- Posts -->
   <div class="flex items-center">
     <a
+      aria-label="Link to Posts Page"
       href={navbarItems[1].href}
       class="{navbarItemClass} mr-0"
       class:underline={isPostsPage}
