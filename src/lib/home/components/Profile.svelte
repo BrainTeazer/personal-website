@@ -55,6 +55,7 @@
     <div class="flex gap-4">
       {#each profile.contactItems as contactItem}
         <a
+          aria-label="Contact Item"
           rel="noopener noreferrer"
           target="_blank"
           href={contactItem.link}
@@ -97,6 +98,7 @@
 
     <!-- Button to toggle visibility of About -->
     <button
+      aria-label="Expand / Collapse description"
       on:click|preventDefault={() => {
         visible = !visible;
       }}
