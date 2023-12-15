@@ -14,6 +14,7 @@
 <div class="flex {$theme.onBackground}">
   <Navbar />
   <!-- <button
+    aria-label="Toggle theme"
     on:click|preventDefault={darkModeToggle}
     class={fontConfig.headingHoverOpacity}
   >

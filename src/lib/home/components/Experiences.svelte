@@ -17,6 +17,7 @@
         <!-- Job Title -->
         {#if experience.jobLink}
           <a
+            aria-label="Link to Job Description"
             href={experience.jobLink}
             target="_blank"
             rel="noopener noreferrer"
@@ -29,6 +30,7 @@
 
         <!-- Company Name and Link -->
         <a
+          aria-label="Employer Website"
           href={experience.organization.href}
           target="_blank"
           rel="noopener noreferrer"
