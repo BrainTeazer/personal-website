@@ -52,7 +52,7 @@
     <div class="flex gap-4">
       {#each profile.contactItems as contactItem}
         <a
-          aria-label="Contact Item"
+          aria-label={contactItem.name}
           rel="noopener noreferrer"
           target="_blank"
           href={contactItem.link}
