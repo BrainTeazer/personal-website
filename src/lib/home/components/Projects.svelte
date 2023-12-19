@@ -16,7 +16,7 @@
         <a
           aria-label={project.title}
           href={project.source}
-          class="{fontConfig.heading} font-semibold {fontConfig.headingHoverOpacity} max-w-fit"
+          class="text-xl md:{fontConfig.heading} font-bold md:font-semibold {fontConfig.headingHoverOpacity} max-w-fit"
         >
           {project.title}
         </a>
