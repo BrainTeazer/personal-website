@@ -30,7 +30,7 @@
   {id}
 >
   <!-- Name, Prelim, Image and Contact -->
-  <div class="flex flex-col items-center gap-4 justify-center text-center">
+  <div class="flex flex-col items-center gap-2 justify-center text-center">
     <!-- Image -->
     <img
       src={profile.imgSrc}
@@ -39,7 +39,7 @@
     />
 
     <!-- Name -->
-    <div class="text-5xl font-bold">
+    <div class="text-4xl font-bold">
       {profile.name}
     </div>
 

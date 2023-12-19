@@ -21,11 +21,13 @@
             href={experience.jobLink}
             target="_blank"
             rel="noopener noreferrer"
-            class="{fontConfig.heading} font-medium {fontConfig.headingHoverOpacity} max-w-fit"
+            class="text-xl md:{fontConfig.heading} md:font-medium font-bold {fontConfig.headingHoverOpacity} max-w-fit"
             >{experience.title}</a
           >
         {:else}
-          <div class="font-medium {fontConfig.heading}">{experience.title}</div>
+          <div class="md:font-medium font-bold text-xl md:{fontConfig.heading}">
+            {experience.title}
+          </div>
         {/if}
 
         <!-- Company Name and Link -->
