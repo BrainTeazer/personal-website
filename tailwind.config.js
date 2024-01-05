@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: "class",
-  content: ["./src/**/*.{html,js,svelte,ts}", "./src/lib/**/*.{html,js,svelte,ts}"],
+  content: [
+    "./src/**/*.{html,js,svelte,ts}",
+    "./src/lib/**/*.{html,js,svelte,ts}",
+  ],
   variants: {
     extend: {
       display: ["group-hover"],
@@ -15,9 +18,7 @@ export default {
       },
 
       fontFamily: {
-        "space-grotesk": ["Space Grotesk", "sans-serif"],
-        "ibm-plex-serif": ["IBM Plex Serif", "serif"],
-        "ibm-plex-mono": ["IBM Plex Mono", "monospace"],
+        "atkinson-hyperlegible": ["Atkinson Hyperlegible"],
       },
     },
   },
