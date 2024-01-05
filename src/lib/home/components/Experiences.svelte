@@ -21,11 +21,13 @@
             href={experience.jobLink}
             target="_blank"
             rel="noopener noreferrer"
-            class="text-xl md:{fontConfig.heading} md:font-medium font-bold {fontConfig.headingHoverOpacity} max-w-fit"
+            class="text-2xl md:{fontConfig.heading} md:font-medium font-bold {fontConfig.headingHoverOpacity} max-w-fit"
             >{experience.title}</a
           >
         {:else}
-          <div class="md:font-medium font-bold text-xl md:{fontConfig.heading}">
+          <div
+            class="md:font-medium font-bold text-2xl md:{fontConfig.heading}"
+          >
             {experience.title}
           </div>
         {/if}
@@ -37,19 +39,19 @@
           target="_blank"
           rel="noopener noreferrer"
           title={experience.organization.name}
-          class="opacity-50 hover:underline"
+          class="opacity-50 hover:underline text-xl md:text-2xl"
         >
           {experience.organization.name}
         </a>
 
         <!-- Work Duration -->
-        <div class="flex gap-2">
+        <div class="flex gap-2 text-lg md:text-xl">
           <Calendar />
           {formatDate(experience.date[0])} - {formatDate(experience.date[1])}
         </div>
 
         <!-- Job tags -->
-        <div class="flex flex-wrap gap-2 mt-4 max-w-[40em]">
+        <div class="flex flex-wrap gap-2 mt-4 max-w-[40em] text-lg">
           {#each experience.keywords as keyword}
             <Tag tag={keyword} />
           {/each}

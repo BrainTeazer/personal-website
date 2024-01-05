@@ -65,9 +65,7 @@
   </div>
 
   <!-- About -->
-  <div
-    class="font-ibm-plex-serif sm:w-4/5 lg:w-[30em] md:w-[30em] text-center md:text-left"
-  >
+  <div class="sm:w-4/5 lg:w-[30em] md:w-[30em] text-center md:text-left">
     {#if visible}
       <Card
         class="{fontConfig.large} mb-2 {$theme.onSurface}"

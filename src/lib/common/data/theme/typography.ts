@@ -13,8 +13,8 @@ export const fontConfig: Typography = {
   heading: "text-4xl",
   subheading: "text-2xl",
   small: "text-sm",
-  medium: "text-xl",
+  medium: "text-2xl",
   large: "text-2xl",
   headingHoverOpacity: "hover:opacity-70",
-  fontFamilySerif: "font-ibm-plex-serif",
+  fontFamilySerif: "font-atkinson-hyperlegible",
 } as const;

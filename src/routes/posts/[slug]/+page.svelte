@@ -12,7 +12,7 @@
     <div class="flex justify-center">
       <!-- Container -->
       <div
-        class="flex flex-col justify-center w-3/4 {$theme.surface} {$theme.onSurface} p-4 m-4 border-2 {$theme.border}"
+        class="flex flex-col justify-center w-7/8 md:w-4/5 {$theme.surface} {$theme.onSurface} p-4 m-4 border-2 {$theme.border}"
       >
         <!-- Title of Blog -->
         <Title title={post.metadata.title} />
@@ -22,7 +22,7 @@
 
         <!-- Blog Content -->
 
-        <div class="font-ibm-plex-serif">
+        <div class="text-lg md:text-2xl">
           <svelte:component this={post.default} />
         </div>
       </div>
