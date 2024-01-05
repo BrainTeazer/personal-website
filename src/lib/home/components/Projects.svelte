@@ -16,18 +16,18 @@
         <a
           aria-label={project.title}
           href={project.source}
-          class="text-xl md:{fontConfig.heading} font-bold md:font-semibold {fontConfig.headingHoverOpacity} max-w-fit"
+          class="text-2xl md:{fontConfig.heading} font-bold md:font-semibold {fontConfig.headingHoverOpacity} max-w-fit"
         >
           {project.title}
         </a>
 
         <!-- Description -->
-        <div class="opacity-50">
+        <div class="opacity-50 text-xl md:text-2xl">
           {project.description}
         </div>
 
         <!-- Toolset -->
-        <div class="flex flex-wrap gap-2">
+        <div class="flex flex-wrap gap-2 text-lg">
           {#each project.toolset as tool}
             <Tag tag={tool} />
           {/each}
