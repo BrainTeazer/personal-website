@@ -3,7 +3,8 @@
   import Navbar from "$lib/common/components/Navbar.svelte";
   import { darkTheme, lightTheme } from "$lib/common/data/theme/theme";
   import { theme } from "$lib/../stores";
-  import { Moon, Sun } from "lucide-svelte";
+  import Moon from "$lib/common/components/icons/Moon.svelte";
+  import Sun from "$lib/common/components/icons/Sun.svelte";
   import { fontConfig } from "$lib/common/data/theme/typography";
 
   const darkModeToggle = () => {
