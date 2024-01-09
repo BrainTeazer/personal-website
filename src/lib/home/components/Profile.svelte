@@ -1,7 +1,8 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { theme } from "$lib/../stores";
-  import { ChevronDown, ChevronUp } from "lucide-svelte";
+  import ChevronUp from "$lib/common/components/icons/ChevronUp.svelte";
+  import ChevronDown from "$lib/common/components/icons/ChevronDown.svelte";
   import { slide } from "svelte/transition";
   import profile from "$lib/home/data/profile";
   import Card from "$lib/common/components/Card.svelte";

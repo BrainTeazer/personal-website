@@ -1,5 +1,8 @@
 import { fontConfig } from "$lib/common/data/theme/typography";
-import { Github, Linkedin, Mail, Phone } from "lucide-svelte";
+import Github from "$lib/common/components/icons/Github.svelte";
+import Phone from "$lib/common/components/icons/Phone.svelte";
+import Mail from "$lib/common/components/icons/Mail.svelte";
+import Linkedin from "$lib/common/components/icons/Linkedin.svelte";
 
 export default {
   imgSrc: "./profile.jpeg",

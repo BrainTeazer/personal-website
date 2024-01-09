@@ -1,7 +1,7 @@
 <script lang="ts">
   import Section from "$lib/common/components/Section.svelte";
   import Card from "$lib/common/components/Card.svelte";
-  import { Calendar } from "lucide-svelte";
+  import Calendar from "$lib/common/components/icons/Calendar.svelte";
   import { formatDate } from "$lib/home/functions/formatDate";
   import experiences from "$lib/home/data/experiences";
   import Tag from "$lib/common/components/Tag.svelte";
