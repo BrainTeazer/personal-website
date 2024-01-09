@@ -1,4 +1,7 @@
-import { Book, Briefcase, Code, Home } from "lucide-svelte";
+import Book from "$lib/common/components/icons/Book.svelte";
+import Home from "$lib/common/components/icons/Home.svelte";
+import Code from "$lib/common/components/icons/Code.svelte";
+import Briefcase from "$lib/common/components/icons/Briefcase.svelte";
 
 export default [
   {

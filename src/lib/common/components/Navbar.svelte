@@ -1,7 +1,7 @@
 <script lang="ts">
   import { theme } from "$lib/../stores";
   import { page } from "$app/stores";
-  import { ChevronRight } from "lucide-svelte";
+  import ChevronRight from "$lib/common/components/icons/ChevronRight.svelte";
   import navbarItems from "$lib/common/data/navbarItems";
   import { fontConfig } from "$lib/common/data/theme/typography";
 
@@ -9,7 +9,7 @@
   $: urlPath = $page.url.pathname;
 
   $: isPostsPage = urlPath.slice(0, postsPath.length) === postsPath;
-  $: isPost = urlPath.length > postsPath.length;
+  $: isPost = urlPath.length > postsPath.length + 1;
 
   const navbarItemClass: string = `opacity-100 hover:opacity-90 m-2`;
 </script>
@@ -47,7 +47,7 @@
 
         <!-- Post title -->
         <div class="opacity-50">
-          {urlPath.slice(postsPath.length + 1)}
+          {urlPath.slice(postsPath.length + 1, urlPath.length)}
         </div>
       </div>
     {/if}
