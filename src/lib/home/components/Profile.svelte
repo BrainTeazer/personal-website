@@ -80,14 +80,8 @@
             class={urlClass}>neophile</a
           >
           and enjoy learning/trying out new things, whether cutting-edge or just
-          something I want to try. I love
-          <a
-            href="https://www.last.fm/user/aybanj/"
-            target="_blank"
-            class={urlClass}
-          >
-            music</a
-          >, playing sports, and the command line.
+          something I want to try. I love music, playing sports, and the command
+          line.
         </div>
       </Card>
     {/if}
