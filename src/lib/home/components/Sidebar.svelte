@@ -6,7 +6,7 @@
 </script>
 
 <div
-  class="flex m-2 md:m-4 rounded-[30px] fixed bottom-0 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:flex-col md:left-0 lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 lg:flex-col lg:left-0 {$theme.surface} gap-4 border-2 {$theme.border} {$theme.onSurface} p-2"
+  class="flex m-2 md:m-4 rounded-[10px] fixed bottom-0 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:flex-col md:left-0 lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 lg:flex-col lg:left-0 {$theme.surface} gap-4 border-2 {$theme.border} {$theme.onSurface} p-2"
 >
   {#each sections as section}
     <a

@@ -7,9 +7,7 @@
   export let content: any;
 </script>
 
-<div
-  class="h-[100vh] {$theme.background} {$theme.onBackground} {$$props.class}"
->
+<div class="{$theme.background} {$theme.onBackground} {$$props.class}">
   <div class="flex justify-center">
     <!-- Container -->
     <div
