@@ -4,9 +4,6 @@
   import skills from "$lib/home/data/skills";
 
   export let id: string;
-
-  let imgWidth: number = 100;
-  let imgHeight: number = 100;
 </script>
 
 <Section title={"Languages, Frameworks & Tools"} {id}>
