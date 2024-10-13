@@ -8,18 +8,45 @@ export type experienceProp = {
 
 export default [
   {
+    title: "Software Engineer",
+    organization: {
+      name: "Bertrandt Technology (formerly Philotech)",
+      href: "https://www.philotech.net/",
+    },
+    date: [new Date(2024, 7)],
+    jobLink: null,
+    description: [],
+    keywords: [
+      "QML",
+      "Javascript",
+      "Software Engineering",
+      "Svelte",
+      "C++",
+      "Javascript",
+      "Typescript",
+      "Jira",
+      "Confluence",
+      "Bamboo",
+      "Arch Linux",
+      "Git",
+    ],
+  },
+  {
     title: "Werkstudent Software Engineering",
     organization: {
       name: "Bertrandt Technology (formerly Philotech)",
       href: "https://www.philotech.net/",
     },
-    date: [new Date(2023, 7)],
+    date: [new Date(2023, 7), new Date(2024, 7)],
     jobLink: null,
     description: [],
     keywords: [
+      "QML",
+      "Javascript",
       "Software Engineering",
       "STM32",
       "C",
+      "Git",
       "Embedded Systems",
       "Aerospace",
       "Documentation",

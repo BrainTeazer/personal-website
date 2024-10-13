@@ -51,7 +51,7 @@
         </div>
 
         <!-- Job tags -->
-        <div class="flex flex-wrap gap-2 mt-4 max-w-[40em] text-lg">
+        <div class="flex flex-wrap gap-2 mt-4 max-w-[40em] text-lg mt-auto">
           {#each experience.keywords as keyword}
             <Tag tag={keyword} />
           {/each}
