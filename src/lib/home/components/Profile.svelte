@@ -9,7 +9,7 @@
   import { fontConfig } from "$lib/common/data/theme/typography";
 
   const urlClass: string =
-    "underline decoration-black decoration-2 hover:underline-offset-4";
+    "underline decoration-black decoration-2 hover:underline-offset-4 text-blue-700";
 
   // if it is screen is smaller than 639px, about should not be visible
   let media = window.matchMedia("(max-width: 639px)");
@@ -73,8 +73,8 @@
         transition={slide}
       >
         <div>
-          👋🏽 Hello there :-) . I am an undergrad CS student, and avid
-          open-source and privacy enthusiast. I am a <a
+          👋🏽 Hello there :-) . I am a Software Engineer, and avid open-source
+          and privacy enthusiast. I am a <a
             href="https://en.wikipedia.org/wiki/Neophile"
             target="_blank"
             class={urlClass}>neophile</a
