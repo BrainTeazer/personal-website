@@ -9,14 +9,14 @@ export default [
   {
     title: "Rippit",
     description: "Fullstack forum website",
-    toolset: ["PHP", "Javascript", "MySQL", "MongoDB", "Bootstrap"],
+    toolset: ["PHP", "JavaScript", "MySQL", "MongoDB", "Bootstrap"],
     source: "https://github.com/BrainTeazer/Rippit",
   },
   {
     title: "Bug World",
     description:
       "Client-side bug simulation game (GUI, assembler, parser, simulator)",
-    toolset: ["Javascript", "HTML", "CSS", "Jest"],
+    toolset: ["JavaScript", "HTML", "CSS", "Jest"],
     source: "https://github.com/BrainTeazer/bug-world",
   },
   {
@@ -59,7 +59,7 @@ export default [
   {
     title: "Source Code",
     description: "Source code of personal website hosted on Github Pages",
-    toolset: ["Typescript", "Svelte", "Tailwind CSS"],
+    toolset: ["TypeScript", "Svelte", "Tailwind CSS"],
     source: "https://github.com/BrainTeazer/personal-website",
   },
 ] as const;
