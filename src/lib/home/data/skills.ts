@@ -1,4 +1,4 @@
-const iconsPath = "./icons/";
+// const iconsPath = "./icons/";
 
 export type skillProps = {
   name: string;
@@ -8,8 +8,8 @@ export type skillProps = {
 export default [
   "C",
   "C++",
-  "Javascript",
-  "Typescript",
+  "JavaScript",
+  "TypeScript",
   "Python",
   "Linux",
   "Git",
