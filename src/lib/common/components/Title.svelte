@@ -4,6 +4,8 @@
   export let title: string;
 </script>
 
-<div class="text-5xl font-bold {$theme.onBackground} {$$props.class}">
+<div
+  class="text-5xl font-bold text-center {$theme.onBackground} {$$props.class}"
+>
   {title}
 </div>
