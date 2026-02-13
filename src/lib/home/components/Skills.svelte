@@ -11,7 +11,7 @@
   <div class="gap-4 mt-8 grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4">
     {#each skills as skill}
       <Card class="p-4 m-1 md:m-2 flex flex-col items-center shadow-none">
-        <div class="font-medium text-2xl md:text-3xl">{skill}</div>
+        <div class="font-medium text-xl md:text-3xl">{skill}</div>
       </Card>
     {/each}
   </div>
