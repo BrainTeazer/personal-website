@@ -9,7 +9,7 @@ export default [
   {
     title: "Rippit",
     description: "Fullstack forum website",
-    toolset: ["PHP", "JavaScript", "MySQL", "MongoDB", "Bootstrap"],
+    toolset: ["PHP", "JavaScript", "MySQL", "Bootstrap"],
     source: "https://github.com/BrainTeazer/Rippit",
   },
   {
